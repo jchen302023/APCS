@@ -2,6 +2,7 @@ Netlogo:
 to sayhelloworld
    print "hello world"
 end
+(add a button that can run the command and when you press it, it should print in the observer) 
 
 Python:
 print ('hello world')
