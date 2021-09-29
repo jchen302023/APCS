@@ -1,0 +1,12 @@
+Netlogo: 
+to sayhelloworld
+   print "hello world"
+end
+
+Python:
+print ('hello world')
+
+Scheme:
+
+(display "hello world")
+(newline)
