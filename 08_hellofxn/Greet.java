@@ -9,9 +9,9 @@ public class Greet {
      }
 } 
 
-*/ The star thing is supposed to make comments, wow. Didn't know that.
-*/ Three names are created and they have to be greeted.  Returns three lines:
+/* The star thing is supposed to make comments, wow. Didn't know that.
+Three names are created and they have to be greeted.  Returns three lines:
 *Oh hello again Ducky!
 *Oh hello again Brain Maggot!
 *Oh hello again my last brain cell!
-
+*/
