@@ -17,4 +17,4 @@ public class BigSib {
 }
 
 /* Not executing this program directly so main method is not needed.
-BigSib.java has only the method which is used by Greet.java file to run
+BigSib.java has only the method which is used by Greet.java file to run*/
