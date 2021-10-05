@@ -7,8 +7,8 @@ HW10: Refactor Big Sib One
 public class Greet {
     public static void main( String[] args )
     {
-        System.out.println( greet("Crosby") );
-        System.out.println( greet("Stills") );
-        System.out.println( greet("Nash") );
+        System.out.println(greet("Crosby") );
+        System.out.println(greet("Stills") );
+        System.out.println(greet("Nash") );
     }
 }
