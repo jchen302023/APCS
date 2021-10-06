@@ -2,7 +2,7 @@
 Team Jelly: Lea Brandon Jacc (Gunter, Ducky, Large)
 APCS
 HW12: On Elder Individuality and the Elimination of Radio Fuzz
-10/5/21
+2021-10-06
 */
 
 public class Greet {
