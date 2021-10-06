@@ -11,7 +11,7 @@ in a static context. Also I got a lot of stack overflows.
 QCC: Help.
 */ 
 
-public class BigSib {
+/* public class BigSib {
     
      public static String setHelloMsg(String name) 
      {String hellomessage;
@@ -28,4 +28,16 @@ public class BigSib {
      }
  
 }
-       
+*/
+
+public class BigSib {
+      String hellomessage;
+      public void setHelloMsg(String msg)
+      {
+        hellomessage = msg;
+      }
+      public String greet(String name) 
+      {
+        return hellomessage + " " + name;
+      }
+} 
