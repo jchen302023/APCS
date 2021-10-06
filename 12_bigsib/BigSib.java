@@ -7,7 +7,7 @@ HW12: On Elder Individuality and the Elimination of Radio Fuzz
 /* DISCO: Prints out freshmanfreshman. I don't know how to get it to work. Best I could
 do. Don't know how to refer back to the name from setHelloMsg so that I can use it in the greet.
 Tried putting it outside the method boxes but it just said non-static variables cannot be referenced
-in a static context. 
+in a static context. Also I got a lot of stack overflows. 
 QCC: Help.
 */ 
 
