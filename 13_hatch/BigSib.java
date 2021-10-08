@@ -15,9 +15,8 @@ Word up Kong Fooey, Word up mom.
 
 */
 public class BigSib {
-
      String hellomessage = "Word up";
-
+     {
      public String greet(String name)
      {
       return hellomessage + " " + name; 
