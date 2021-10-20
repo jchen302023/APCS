@@ -8,8 +8,8 @@ public class StatsDriver {
 	State.mean(0.6,0.8);// 0.7
 	State.max(6,8); // 8
 	State.max(0.6,0.8); // 0.8
-	State.geoMean(6,8); // 10
-	State.geoMean(0.6,0.8) // 0.1 
+	State.geoMean(6,8); // 100
+	State.geoMean(0.6,0.8) // 1
 	}
 	
 	/*public static int mean(int 6, int 8)
