@@ -15,6 +15,7 @@ public class Stats {
 
   public static int mean(int a, int b) {
   	int ab = ((a + b) / 2); // return ((a + b) / 2); works too
+  	System.out.println(ab); 
         return (ab);   
   }
 
