@@ -15,11 +15,16 @@ public class Stats {
 
   public static int mean(int a, int b) {
   	int ab = ((a + b) / 2); // return ((a + b) / 2); works too
-        return (ab);   
+	System.out.println(ab);
+        return (int) (ab);   
+	
   }
 
   public static double mean(double a, double b) {
-        return ((double) (a + b) / 2); 
+        //return ((double) (a + b) / 2); 
+	double ab = ((a + b) / 2);
+        System.out.println(ab);
+	return (double) ab; 
   }
 
   public static int max(int a, int b) {
@@ -74,4 +79,4 @@ public class Stats {
 	double abc = a * b * c;
         return (double) Math.cbrt(abc);
   } 
-} // finish 
+} // finish, wooo!! 
