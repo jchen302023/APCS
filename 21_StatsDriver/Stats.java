@@ -15,9 +15,14 @@ public class Stats {
 
   public static int mean(int a, int b) {
   	int ab = ((a + b) / 2); // return ((a + b) / 2); works too
+<<<<<<< HEAD
 	System.out.println(ab);
         return (int) (ab);   
 	
+=======
+  	System.out.println(ab); 
+        return (ab);   
+>>>>>>> f88b74e42fd39843ca158bc0236cf0ae0127250b
   }
 
   public static double mean(double a, double b) {
@@ -79,4 +84,8 @@ public class Stats {
 	double abc = a * b * c;
         return (double) Math.cbrt(abc);
   } 
+<<<<<<< HEAD
 } // finish, wooo!! 
+=======
+} // finish 
+>>>>>>> f88b74e42fd39843ca158bc0236cf0ae0127250b
