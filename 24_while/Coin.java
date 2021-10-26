@@ -1,7 +1,7 @@
 /***
- * APLWE : Ivina Wang (Sealie), Jacc Chen (Large) 
+ * APLWE : Ivina Wang (Sealie), Jacc Chen (Large)
  *  APCS
- *  HW23: What does Equality look like? 
+ *  HW23: What does Equality look like?
  *  QCC: How do we output "yours: quarter -- null" when the first constructor
 only gives you the name of the coin and not the upFace? What does this. mean?
  * DISCO: We used Math.random() to get a random number between 0.0 and 1.0 for
@@ -16,7 +16,7 @@ public class Coin {
   private String upFace, name;
   private int flipCtr, headsCtr, tailsCtr;
   private double bias = 0.5;
-  
+
   /***
    *  Coin() -- default constuctor
    *  precond:
@@ -24,7 +24,7 @@ public class Coin {
    ***/
   public Coin() {
   	reset ("heads" , 0.5);
-	
+
   }
 
 
@@ -39,7 +39,7 @@ public class Coin {
       "dollar"
       postcond:
   ***/
-  
+
   public Coin( String s ) {
   	this();
 	name = s;
@@ -90,7 +90,7 @@ public class Coin {
 	else if (name.equals("dollar")) { value = 1.00;}
 	return value;
 }
-  
+
 
 
   /***
@@ -122,13 +122,13 @@ public class Coin {
 	double randDbl = Math.random();
 	if (randDbl < bias) {
 	  upFace = "Heads";
-          headsCtr += 1; 
+          headsCtr += 1;
           }
         else {
           upFace = "Tails";
 	  tailsCtr += 1;
           }
-        flipCtr = headsCtr + tailsCtr; 
+        flipCtr = headsCtr + tailsCtr;
         return upFace;
   }
 
@@ -151,7 +151,7 @@ public class Coin {
    ***/
 
   public String toString() {
-	return " " + name + " -- " + upFace;  
+	return " " + name + " -- " + upFace;
   }
-	
+
 }//end class
