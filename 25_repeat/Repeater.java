@@ -10,6 +10,7 @@
 */
 
 public class Repeater {
+
   public static void main (String[] args) {
     System.out.println (fenceW(1));
     System.out.println (fenceW(2));
@@ -18,6 +19,7 @@ public class Repeater {
     System.out.println (fenceR(2));
     System.out.println (fenceR(3));
   } // end main method
+
   public static String fenceW(int fposts) {
     String firstpost = "|";
     int counter = 1;
@@ -28,6 +30,7 @@ public class Repeater {
     }
     return firstpost;
   } // end method fenceW
+
   public static String fenceR(int fposts) {
     if (fposts == 1) {
       return "|";
