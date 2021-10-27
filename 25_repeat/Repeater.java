@@ -3,6 +3,10 @@
     APCS
     HW25 -- While loops cont., recursion, and fences
     2021-10-26
+    DISCO: You can do recursion by doing the method name and then the integer
+    the method takes minus one until fposts equals 1 where it returns the
+    final fence post. fenceW works from first to last fence. fenceR works from
+    the last to first fence. 
 */
 
 public class Repeater {
