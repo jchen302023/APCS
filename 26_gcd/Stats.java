@@ -3,7 +3,8 @@
     APCS
     HW26 -- GCD Three Ways
     2021-10-27
-    DISCO:
+    DISCO: I don't know how to do the while loop for the gcdEW, need help.
+    Running the code almsot made my computer break again, I think it almost exploded.
 */
 
 public class Stats {
@@ -13,6 +14,8 @@ public class Stats {
     System.out.println (gcd(15, 18));
     System.out.println (gcdER(5, 5));
     System.out.println (gcdER(15,18));
+    System.out.println (gcdEW(5, 5));
+    System.out.println (gcdEW(15, 18));
 
   } // end main method
 
@@ -45,5 +48,21 @@ public static int gcdER(int a, int b) {
     }
 
 } // end method gcdER
+
+public static int gcdEW(int a, int b) {
+
+  while (a != b) {
+    if (a > (b - a)) {
+      b = a;
+      a = (b - a);
+    }
+    if (a < (b - a)) {
+      a = a;
+      b = (b - a);
+    }
+  }
+return a;
+
+}// end method gcdEW
 
 } // end class Stats
