@@ -5,7 +5,9 @@
     2021-10-28
     DISCO: final is a keyword that cannot/ should not be used
     as a variable. s.substring takes two integers, it represents the spaces between
-    the letters and quotation marks etc. Outputs characters between the spaces. 
+    the letters and quotation marks etc. Outputs characters between the spaces. Ex:
+    sapce before first character of string is position 0, space after that character
+    is position 1. s.substring(0,1) would return that character between the spaces. 
 */
 
 public class Rof{
