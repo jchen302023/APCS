@@ -3,7 +3,9 @@
  * APCS
  * HW29: For Loops & Recursion with prettifying numbers
  * 2021-11-02
- * DISCO
+ * DISCO: Integer.parseInt turns Strings to Integers. Integer.toString turns
+ Integers to Strings. Have to remeber to use variable i in the loop for every
+ variable needed or it won't work for larger # like one million. 
  */
 
 public class Commafier {
