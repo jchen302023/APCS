@@ -5,3 +5,72 @@
     2021-11-03
     DISCO:
 */
+
+public class Pig
+{
+  //Q: How does this initialization make your life easier?
+  private static final String VOWELS = "aeiou";
+
+
+  /*=====================================
+    boolean hasA(String,String) -- checks for a letter in a String
+    pre:  w != null, letter.length() == 1
+    post: hasA("cat", "a") -> true
+    hasA("cat", "p")       -> false
+    =====================================*/
+  public static boolean hasA(String w, String letter) {
+    int wlength = w.length();
+    int lettercounter = 0;
+
+    if (w.equals(letter)) {
+      return true;
+    }
+    for (int i = 0; i < wlength; i++) {
+      if (w.substring(i, i + 1).equals(letter)) {
+        lettercounter += 1;
+      }
+    }
+    if (lettercounter >= 1) {
+      return true;
+    }
+    else { return false; }
+  } //end hasA()
+
+
+  /*=====================================
+    boolean isAVowel(String) -- tells whether a letter is a vowel
+    precondition: letter.length() == 1
+    =====================================*/
+  public static boolean isAVowel(String letter) {
+    int lettercounter = 0;
+
+    for (int i = 0; i < 5; i++) {
+      if (VOWELS.substring(i, i + 1).equals(letter)) {
+        lettercounter += 1;
+      }
+    }
+    if (lettercounter >= 1) {
+      return true;
+    }
+    else { return false; }
+  } // end isAVowel
+
+  /*=====================================
+      int countVowels(String) -- counts vowels in a String
+      pre:  w != null
+      post: countVowels("meatball") -> 3
+      =====================================*/
+    public static int countVowels( String w ) {
+      int wlength = w.length();
+      int lettercounter = 0;
+
+      for (int i = 0; i < wlength; i++) {
+        if (isAVowel(w.substring(i, i + 1))) {
+          lettercounter += 1;
+        }
+    }
+    return lettercounter; 
+  }
+
+
+} //end class Pig
