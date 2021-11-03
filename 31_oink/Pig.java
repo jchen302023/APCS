@@ -85,6 +85,24 @@ public class Pig
     else { return false; }
   } // end hasAVowel
 
+  /*=====================================
+      String allVowels(String) -- returns vowels in a String
+      pre:  w != null
+      post: allVowels("meatball") -> "eaa"
+      =====================================*/
+    public static String allVowels( String w ) {
+      String answer = "";
+      int wlength = w.length();
+      int lettercounter = 0;
+
+      for (int i = 0; i < wlength; i++) {
+        if (isAVowel(w.substring(i, i + 1))) {
+          answer += w.substring(i, i + 1);
+        }
+    }
+    return answer;
+    } // end allVowels
+
   public static void main( String[] args )
     {
       System.out.println(hasA("cat", "a"));
@@ -93,6 +111,10 @@ public class Pig
       System.out.println(isAVowel("z"));
       System.out.println(countVowels("cat"));
       System.out.println(countVowels("pigpongpinkpog"));
+      System.out.println(hasAVowel("amongus"));
+      System.out.println(hasAVowel("mmmmmmm"));
+      System.out.println(allVowels("meatball"));
+      System.out.println(allVowels("aeiou"));
     }//end main()
 
 } //end class Pig
