@@ -3,7 +3,8 @@
     APCS
     HW31 -- Otnay Ybay ethay Airhay Onway Ymay Inneechay Inchay Inchay
     2021-11-03
-    DISCO:
+    DISCO: Call a method in method, makes your life 10000000000 times easier.
+    Saved me from copy and pasting for who knows how long :) 
 */
 
 public class Pig
