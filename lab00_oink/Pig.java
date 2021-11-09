@@ -3,7 +3,8 @@
  * APCS
  * L00:
  * 2021-11-08
- * time spent:
+ * time spent: Punctuation string can not use indexOf, must write a for loop.
+ QCC: How do we factor in numbers. 
  *
  * class Pig
  * a Pig Latin translator
@@ -198,7 +199,7 @@ public class Pig {
           hasPunc("cat") -> false
     =====================================*/
 public static boolean hasPunc( String w ) {
-  
+
       boolean punc = false;
       for(int i=0; i<w.length(); i++){
           if(PUNCS.indexOf(w.substring(i,i+1)) != -1){
