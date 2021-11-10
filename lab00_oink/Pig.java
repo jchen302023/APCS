@@ -5,7 +5,8 @@
  * 2021-11-09
  * time spent:
  QCC: Does not work if we do not put quotations around the sentence, do not know
- how to fix. Sentence can handle capitalization, fullfills general rules. 
+ how to fix. Sentence can handle capitalization, fullfills general rules. Yay became
+ yayway, not ayyay for this one. 
  *
  * class Pig
  * a Pig Latin translator
