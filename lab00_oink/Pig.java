@@ -6,7 +6,7 @@
  * time spent:
  QCC: Does not work if we do not put quotations around the sentence, do not know
  how to fix. Sentence can handle capitalization, fullfills general rules. Yay became
- yayway, not ayyay for this one. 
+ yayway, not ayyay for this one.
  *
  * class Pig
  * a Pig Latin translator
@@ -273,8 +273,13 @@
       				System.out.println( "engToPig \t" + engToPig(word) );
       				System.out.println( "---------------------" );
               */
-              System.out.println( pigSentence(word) + " ");
+              Scanner sc = new Scanner(System.in);
+                      		while(sc.hasNext()){
+                        			String s = sc.nextLine();
+                        			System.out.print(s + " --> ");
+                        			System.out.println(Pig.pigSentence(s));
     			}
+        }
 
   		}//end main()
 
