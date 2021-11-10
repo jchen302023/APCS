@@ -2,9 +2,10 @@
  * Noobies - Lawrence Joa(Steve, John), Ivina Wang (Sealie), Jacc Chen (Large)
  * APCS
  * L00:
- * 2021-11-08
- * time spent: Punctuation string can not use indexOf, must write a for loop.
- QCC: How do we factor in numbers.
+ * 2021-11-09
+ * time spent:
+ QCC: Does not work if we do not put quotations around the sentence, do not know
+ how to fix. Sentence can handle capitalization. 
  *
  * class Pig
  * a Pig Latin translator
@@ -264,11 +265,14 @@
 			public static void main( String[] args ) {
 
     			for( String word : args ) {
+            /*
       				System.out.println( "allVowels \t" + allVowels(word) );
       				System.out.println( "firstVowels \t" + firstVowel(word) );
       				System.out.println( "countVowels \t" + countVowels(word) );
       				System.out.println( "engToPig \t" + engToPig(word) );
       				System.out.println( "---------------------" );
+              */
+              System.out.println( pigSentence(word) + " ");
     			}
 
   		}//end main()
