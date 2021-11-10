@@ -5,7 +5,7 @@
  * 2021-11-09
  * time spent:
  QCC: Does not work if we do not put quotations around the sentence, do not know
- how to fix. Sentence can handle capitalization. 
+ how to fix. Sentence can handle capitalization, fullfills general rules. 
  *
  * class Pig
  * a Pig Latin translator
