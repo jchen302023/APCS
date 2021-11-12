@@ -8,9 +8,9 @@
 
 public class Loopier {
   public static int linSearch( int[], int target) {
-
+    int randomints = Math.random() * 10;
   } // end method linSearch
-  
+
   public static int linSEarchR( int[], int target) {
 
   } // end method linSearchR
