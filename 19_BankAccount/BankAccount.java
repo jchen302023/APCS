@@ -1,3 +1,15 @@
+<<<<<<< HEAD
+=======
+*/ 
+Jacc Chen
+APCS
+HW19: Mo Money Mo Problems More Awesome 
+DISCO
+
+QCC
+/*
+
+>>>>>>> cef617e4946d1904a9d3ebc2f99cc447771734d8
 public class BankAccount {
 
     // instance variables
@@ -101,4 +113,8 @@ public class BankAccount {
         ba.authenticate(777555, "tacky");
     }// end main()
 
+<<<<<<< HEAD
 }// end class BankAccount
+=======
+}// end class BankAccount
+>>>>>>> cef617e4946d1904a9d3ebc2f99cc447771734d8
