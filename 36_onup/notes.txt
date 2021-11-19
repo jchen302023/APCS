@@ -1,0 +1,30 @@
+Jacc Chen
+APCS
+HW 36: All Quacked Up
+2021-11-18
+time spent: 0.5 hours 
+
+- Compile-time errors: syntax errors. Can be solved by bisection 
+	- What if I just do not know what syntax to use... java API..? 
+        - Mostly typos and stuff
+	- Trying to refer to a non-static variable in a non static method(!!) 
+
+- Run-time errors: happens when program runs; i.e. infinite recursion -> StackOverFlowError
+	- Exceptions: - NullPointerException => inst var or object you invoke is null. Declaring 
+                                              new variables like arrays, its elements are 
+                                              initially null. 
+		      - ArrayIndexOutOfBoundsException => Array index is 0 to array.length - 1
+	              - StackOverflowError => infinite recursion 
+                      - FileNotFoundException => file not found 
+                      - ArithmeticExeption => math gone wrong i.e. division by 0 
+
+- Logic errors: expected value from program was not outputted 
+	- Check flow of execution (put a println in each method) 
+	- Try assigning parts of expressions to temporary variables 
+
+- Rage, cope, seethe, mald 
+- Consult ducky
+- If that dont work, use more ducky or just close computer and call it a day 
+
+
+
