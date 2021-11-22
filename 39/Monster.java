@@ -1,6 +1,11 @@
 public class Monster {
-  public boolean isAlive () {
-    int initialhealth = 100;
+  private int damage;
 
+  public boolean isAlive () {
+    return true;
+  }
+  public int attack(Protagonist pat) {
+    damage = (int) Math.random() * 10;
+    return damage;
   }
 }
