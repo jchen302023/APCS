@@ -1,12 +1,27 @@
 public class Protagonist {
-    public int attack() {
 
+    private String name;
+    private int damage;
+
+    public Protagonist (String s) {
+      s = name;
+    }
+    public int attack( Monster smaug) {
+      damage = (int) Math.random() * 100;
+      return damage;
     }
     public boolean isAlive () {
-      int initialhealth = 100;
+
+      return true;
 
     }
+    public String specialize() {
+      return "hi";
+    }
+    public String normalize() {
+      return "hello";
+    }
     public String getName () {
-      
+      return name;
     }
 }
