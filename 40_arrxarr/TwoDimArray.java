@@ -63,7 +63,7 @@ public class TwoDimArray
       }
     }
     return answer;
-  }
+  } // sum 1
 
 
 
@@ -75,7 +75,7 @@ public class TwoDimArray
       answer += sumRow(i, m);
     }
     return answer;
-  }
+  } // sum 2
 
 
   //postcond: returns sum of all items on row r of 2D int array a
@@ -86,7 +86,7 @@ public class TwoDimArray
       answer += a[r][i];
     }
     return answer;
-  }
+  } //sumRow
 
 
   //postcond: returns sum of all items on row r of 2D int array a
@@ -98,7 +98,7 @@ public class TwoDimArray
       summer += icecream;
     }
     return summer;
-  }
+  } // sumRow2
 
 
   public static void main( String [] args )
