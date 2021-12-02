@@ -7,7 +7,7 @@
  DISCO: rat1 keeps the value after each time it is multiplied or divided and it
  carries over to the next dot method you call on it as well, so it keeps stacking.
 
- QCC: Is it possible to make rat1's value reset after each method is called? 
+ QCC: Is it possible to make rat1's value reset after each method is called?
 
  *****************************************************/
 
@@ -45,7 +45,7 @@ public class Rational {
   public void divide(Rational rat) {
     numerator = numerator * rat.denominator;
     denominator = denominator * rat.numerator;
-  }
+  } // divide 
 
   public static void main(String[] args) {
     Rational rat1 = new Rational(2, 3);
@@ -77,6 +77,5 @@ public class Rational {
     System.out.println("rat1 after dividing again... " + rat1.toString());
 
  } // main
-
 
 } //class
