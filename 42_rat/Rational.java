@@ -70,7 +70,7 @@ public class Rational
   {
     _numerator   = this._numerator   * r._numerator;
     _denominator = this._denominator * r._denominator;
-  }
+  } // multiply
 
 
   // divide
@@ -78,14 +78,58 @@ public class Rational
   public void divide( Rational r )
   {
     if ( r._numerator != 0 ) {
-      _numerator   = _numerator   * r._denominator;
-      _denominator = _denominator * r._numerator;
+      _numerator   = this._numerator   * r._denominator;
+      _denominator = this._denominator * r._numerator;
     }
     else {
       System.out.println( "Div by 0 error. Values unchanged." );
     }
-  }
+  } // divide
 
+public int gcdiv(int a, int b) {
+  int gcd = 1;
+  int i = 1;
+    while (i <= a && i <= b) {
+        if (a % i == 0 && b % i == 0) {
+            gcd = i;
+        }
+        i++;
+    }
+     return gcd;
+} // helper method gcd
+
+public int lcm(int a, int b) {
+  int lcm = a * (b / gcdiv(a , b));
+  return lcm;
+} // helper lcm
+
+public void add(Rational r) {
+  if (_denominator == r._denominator) {
+    _numerator = this._numerator + r._numerator;
+    _denominator = this._denominator;
+  }
+  else {
+    _numerator = ((lcm(this._denominator, r._denominator) / this._denominator) * this._numerator) + ((lcm(this._denominator, r._denominator) / r._denominator) * r._numerator);
+    _denominator = lcm(this._denominator, r._denominator);
+  }
+} // add
+
+public void subtract(Rational r) {
+  if (_denominator == r._denominator) {
+    _numerator = this._numerator - r._numerator;
+    _denominator = this._denominator;
+  }
+  else {
+    _numerator = ((lcm(this._denominator, r._denominator) / this._denominator) * this._numerator) - ((lcm(this._denominator, r._denominator) / r._denominator) * r._numerator);
+    _denominator = lcm(this._denominator, r._denominator);
+  }
+} // subtract
+
+public void reduce() {
+  int commonfactor = gcdiv(_numerator, _denominator);
+  _numerator = this._numerator / commonfactor;
+  _denominator = this._denominator / commonfactor;
+} // reduce
 
   //main method for testing
   public static void main( String[] args )
@@ -119,6 +163,27 @@ public class Rational
       System.out.print( r + " / " + t + " = ");
       r.divide(t);
       System.out.println(r);
+
+      System.out.print( u + " + " + u + " = ");
+      u.add(u);
+      System.out.println(u);
+
+      System.out.print( u + " + " + v + " = ");
+      u.add(v);
+      System.out.println(u);
+
+      System.out.print( u + " - " + v + " = ");
+      u.subtract(v);
+      System.out.println(u);
+
+      System.out.print( u + " reduced is... ");
+      u.reduce();
+      System.out.println(u);
+
+      System.out.print( r + " reduced is... ");
+      r.reduce();
+      System.out.println(r);
+
     /*~~~~~v~~~~~~~~~~down~goer~3~~~~~~~~~~~~~v~~~~~
       ~~~~~|~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~|~~~~~*/
   }
