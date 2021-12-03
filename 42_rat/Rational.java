@@ -9,6 +9,11 @@
  * facilitates
  * multiplication
  * division
+
+DISCO:
+* using this. makes things more precise so that there are fewer mess ups in the future
+* (double) a / b is the same as (double) a / (double) b 
+
  **/
 
 public class Rational
