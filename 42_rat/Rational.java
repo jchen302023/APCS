@@ -115,13 +115,14 @@ public void add(Rational r) {
 } // add
 
 public void subtract(Rational r) {
+  int commond = lcm(this._denominator, r._denominator);
   if (_denominator == r._denominator) {
     _numerator = this._numerator - r._numerator;
     _denominator = this._denominator;
   }
   else {
-    _numerator = ((lcm(this._denominator, r._denominator) / this._denominator) * this._numerator) - ((lcm(this._denominator, r._denominator) / r._denominator) * r._numerator);
-    _denominator = lcm(this._denominator, r._denominator);
+    _numerator = ((commond / this._denominator) * this._numerator) - ((commond / r._denominator) * r._numerator);
+    _denominator = commond;
   }
 } // subtract
 
@@ -130,6 +131,19 @@ public void reduce() {
   _numerator = this._numerator / commonfactor;
   _denominator = this._denominator / commonfactor;
 } // reduce
+
+public int compareTo(Rational r) {
+  int commondenom = lcm(this._denominator, r._denominator);
+  if (_numerator == r._numerator && _denominator == r._denominator) {
+    return 0;
+  }
+  if ((((commondenom / this._denominator) * this._numerator) - ((commondenom / r._denominator) * r._numerator)) > 0 ) {
+    return 1;
+  }
+  else {
+    return -1;
+  }
+} // compareTo
 
   //main method for testing
   public static void main( String[] args )
@@ -183,6 +197,15 @@ public void reduce() {
       System.out.print( r + " reduced is... ");
       r.reduce();
       System.out.println(r);
+
+      System.out.print( u + " compared to " + u + " = ");
+      System.out.println(u.compareTo(u));
+
+      System.out.print( v + " compared to " + w + " = ");
+      System.out.println(v.compareTo(w));
+
+      System.out.print( t + " compared to " + u + " = ");
+      System.out.println(t.compareTo(u));
 
     /*~~~~~v~~~~~~~~~~down~goer~3~~~~~~~~~~~~~v~~~~~
       ~~~~~|~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~|~~~~~*/
