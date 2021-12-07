@@ -18,8 +18,7 @@ public class SuperArray
 
   //default constructor – initializes 10-item array
   public SuperArray() {
-    int[] _data = new int[10];
-    int _data = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0}; 
+    _data = new int[10];
     _size = _data.length;
   }
 
@@ -28,19 +27,26 @@ public class SuperArray
   public String toString() {
     String answer = "[";
 
-    for (int i = 0; i < _size - 1; i++) {
+    for (int i = 0; i < _size; i++) {
       answer += _data[i] + ", ";
     }
-    answer += _data[_size] + "]";
+    answer += _data[_size - 1] + "]";
     return answer;
   } // toString
 
 
   //double capacity of SuperArray
   private void expand() {
-    int currentlength = _size;
-    int[] _data = new int[currentlength * 2];
-  }
+    System.out.println("Length of curtis: " + _data.length);
+    int _newsize = _size * 2;
+    int[] _newdata = new int[_newsize];
+    for (int i = 0; i < this._size; i++ ) {
+      _newdata[i] = this._data[i];
+    }
+    _size = _newsize; 
+    _data = _newdata;
+
+  } // expand
 
 
   //accessor -- return value at specified index
