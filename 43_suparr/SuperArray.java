@@ -9,6 +9,18 @@
  * getting and setting element values.
  ***************************/
 
+ /*
+DISCO:
+  * Don't put 'int[]'' in front of '_data' in the constructor. Destruction follows.
+  * Can't use '(String)' to make an int a String
+
+
+QCC:
+  * Why didn't we get to use the method 'get'?
+  * We used set() as a helper method. Was that the intention of creating it?
+*/
+
+
 public class SuperArray
 {
 
@@ -43,7 +55,7 @@ public class SuperArray
     for (int i = 0; i < this._size; i++ ) {
       _newdata[i] = this._data[i];
     }
-    _size = _newsize; 
+    _size = _newsize;
     _data = _newdata;
 
   } // expand
