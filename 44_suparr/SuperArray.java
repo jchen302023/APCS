@@ -65,8 +65,7 @@ public class SuperArray
 
   //mutator -- set value at index to newVal,
   //           return old value at index
-  public int set( int index, int newVal )
-  {
+  public int set( int index, int newVal ) {
     int temp = _data[index];
     _data[index] = newVal;
     return temp;
@@ -74,8 +73,7 @@ public class SuperArray
 
 
   //adds an item after the last item
-  public void add( int newVal )
-  {
+  public void add( int newVal ) {
     int[] mouse = new int[_size + 1];
     for (int i = 0; i < _size; i++) {
       mouse[i] = _data[i];
@@ -88,25 +86,23 @@ public class SuperArray
 
 
   //inserts an item at index
-  public void add( int index, int newVal )
-  {
+  public void add( int index, int newVal ) {
     int[] mole = new int[_size + 1];
     for (int i = 0; i < index; i++) {
       mole[i] = _data[i];
     }
     mole[index] = newVal;
-    for (int h = index + 1; h <= _size - 1; h++) {
-      mole[h] = _data[h];
+    for (int h = index + 1; h < _size + 1; h++) {
+      mole[h] = _data[h - 1];
     }
-    _data = mole; 
+    _data = mole;
     _size += 1;
   }
 
 
   //removes the item at index
   //shifts elements left to fill in newly-empted slot
-  public void remove( int index )
-  {
+  public void remove( int index ) {
     int[] capybara = new int[_size - 1];
     for (int i = 0; i < index; i++) {
       capybara[i] = _data[i];
@@ -169,16 +165,19 @@ public class SuperArray
       mayfield.remove(3);
       System.out.println("Printing SuperArray mayfield post-remove...");
       System.out.println(mayfield);
-/*~~~~~~~~move~me~down~~~~~~~~~~~~~~V~~~~~~~~
+
       mayfield.add(3,99);
       System.out.println("Printing SuperArray mayfield post-insert...");
       System.out.println(mayfield);
+
       mayfield.add(2,88);
       System.out.println("Printing SuperArray mayfield post-insert...");
       System.out.println(mayfield);
+
       mayfield.add(1,77);
       System.out.println("Printing SuperArray mayfield post-insert...");
       System.out.println(mayfield);
+          /*~~~~~~~~move~me~down~~~~~~~~~~~~~~V~~~~~~~~
       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~|~~~~~~~~*/
   }//end main()
 
