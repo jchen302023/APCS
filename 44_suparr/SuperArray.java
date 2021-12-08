@@ -83,13 +83,18 @@ public class SuperArray
     mouse[_size] = newVal;
     _data = mouse;
     _size += 1;
+    System.out.println(_size);
   } // add
 
 
   //inserts an item at index
   public void add( int index, int newVal )
   {
-    /* YOUR IMPLEMENTATION HERE */
+    int[] mole = new int[_size + 1];
+    for (int i = 0; i < index; i++) {
+      mole[i] = _data[i];
+    }
+    mole[index] = newVal;
   }
 
 
@@ -101,8 +106,8 @@ public class SuperArray
     for (int i = 0; i < index; i++) {
       capybara[i] = _data[i];
     }
-    for (int h = 0; h > index && h < _size - 1; h++) {
-      capybara[h] = _data[h];
+    for (int h = index + 1; h <= _size - 1; h++) {
+      capybara[h - 1] = _data[h];
     }
     _data = capybara;
     _size -= 1;
