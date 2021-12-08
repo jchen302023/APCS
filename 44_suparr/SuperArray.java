@@ -95,6 +95,11 @@ public class SuperArray
       mole[i] = _data[i];
     }
     mole[index] = newVal;
+    for (int h = index + 1; h <= _size - 1; h++) {
+      mole[h] = _data[h];
+    }
+    _data = mole; 
+    _size += 1;
   }
 
 
