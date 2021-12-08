@@ -14,6 +14,12 @@
  * adding an element at specified index
  * removing an element at specified index
  ***************************/
+ /**
+ DISCO: Nothing too surprising? :) Helps to draw out a diagram though. 
+ QCC: Changed toString so that for the first for loop, it takes _data.length
+ instead of _size because _size is 0 and it caused some issues. Is an empty array
+ [] or can it have 0's?
+ **/
 
 public class SuperArray
 {
