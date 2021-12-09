@@ -1,6 +1,6 @@
 // TNGP: Puntu (Anjini Katari, Jacc Chen)
 // APCS1 pd7
-// HW44 -- expanding SuperArray functionality, encapsulation
+// HW45 -- Array of Titanium
 // 2021-12-08
 
 /***************************
@@ -15,13 +15,11 @@
  * removing an element at specified index
  ***************************/
  /**
- DISCO: Nothing too surprising? :) Helps to draw out a diagram though. 
- QCC: Changed toString so that for the first for loop, it takes _data.length
- instead of _size because _size is 0 and it caused some issues. Is an empty array
- [] or can it have 0's?
+ DISCO:
+ QCC: What in the bleeding christ does is abstract do?? 
  **/
 
-public class SuperArray
+public abstract class SuperArray implements ListInt
 {
 
   private int[] _data;  //underlying ("encapsulated") container
@@ -79,7 +77,7 @@ public class SuperArray
 
 
   //adds an item after the last item
-  public void add( int newVal ) {
+  public boolean add( int newVal ) {
     int[] mouse = new int[_size + 1];
     for (int i = 0; i < _size; i++) {
       mouse[i] = _data[i];
@@ -88,11 +86,12 @@ public class SuperArray
     _data = mouse;
     _size += 1;
     System.out.println(_size);
+    return true;
   } // add
 
 
   //inserts an item at index
-  public void add( int index, int newVal ) {
+  public boolean add( int index, int newVal ) {
     int[] mole = new int[_size + 1];
     for (int i = 0; i < index; i++) {
       mole[i] = _data[i];
@@ -103,7 +102,8 @@ public class SuperArray
     }
     _data = mole;
     _size += 1;
-  } 
+    return true;
+  }
 
 
   //removes the item at index
@@ -132,7 +132,7 @@ public class SuperArray
   //main method for testing
   public static void main( String[] args )
   {
-
+    /*~~~~~~~~move~me~down~~~~~~~~~~~~~~V~~~~~~~~
       SuperArray curtis = new SuperArray();
       System.out.println( "Printing empty SuperArray curtis..." );
       System.out.println( curtis );
@@ -183,7 +183,7 @@ public class SuperArray
       mayfield.add(1,77);
       System.out.println("Printing SuperArray mayfield post-insert...");
       System.out.println(mayfield);
-          /*~~~~~~~~move~me~down~~~~~~~~~~~~~~V~~~~~~~~
+
       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~|~~~~~~~~*/
   }//end main()
 
