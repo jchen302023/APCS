@@ -1,4 +1,4 @@
-// TNGP: Puntu (Anjini Katari, Jacc Chen)
+/// TNGP: Puntu (Anjini Katari, Jacc Chen)
 // APCS1 pd7
 // HW45 -- Array of Titanium
 // 2021-12-08
@@ -16,10 +16,19 @@
  ***************************/
  /**
  DISCO:
- QCC: What in the bleeding christ does is abstract do?? 
+  * Abstract is a kew word but doesn't seem to help us at all. When
+    trying 'public class SuperArray implements ListInt', errors were
+    found when trying to initialize class meepo
+  * When coding, take things literally...many mistakes and misunderstandings
+    can be made otherwise... :(
+
+ QCC:
+  * What in the bleeding christ does is abstract do??
+  * Something to test- what would happen if we added a main method
+    into ListInt.java?
  **/
 
-public abstract class SuperArray implements ListInt
+public class SuperArray implements ListInt
 {
 
   private int[] _data;  //underlying ("encapsulated") container
@@ -132,59 +141,39 @@ public abstract class SuperArray implements ListInt
   //main method for testing
   public static void main( String[] args )
   {
-    /*~~~~~~~~move~me~down~~~~~~~~~~~~~~V~~~~~~~~
-      SuperArray curtis = new SuperArray();
-      System.out.println( "Printing empty SuperArray curtis..." );
-      System.out.println( curtis );
+      SuperArray meepo = new SuperArray();
+      System.out.println("Printing empty SuperArray meepo...");
+      System.out.println(meepo);
 
-      for( int i = 0; i < curtis._data.length; i++ ) {
-      curtis.set( i, i * 2 );
-      }
+      meepo.add(5);
+      meepo.add(4);
+      meepo.add(3);
+      meepo.add(2);
+      meepo.add(1);
 
-      System.out.println("Printing populated SuperArray curtis...");
-      System.out.println(curtis);
+      System.out.println("Printing populated SuperArray meepo...");
+      System.out.println(meepo);
 
-      for( int i = 0; i < 3; i++ ) {
-      curtis.expand();
-      System.out.println("Printing expanded SuperArray curtis...");
-      System.out.println(curtis);
-      System.out.println("new length of underlying array: "
-      + curtis._data.length );
-      }
+      meepo.remove(3);
+      System.out.println("Printing SuperArray meepo post-remove...");
+      System.out.println(meepo);
+      meepo.remove(3);
+      System.out.println("Printing SuperArray meepo post-remove...");
+      System.out.println(meepo);
 
-      SuperArray mayfield = new SuperArray();
-      System.out.println("Printing empty SuperArray mayfield...");
-      System.out.println(mayfield);
+      meepo.add(3,99);
+      System.out.println("Printing SuperArray meepo post-insert...");
+      System.out.println(meepo);
 
-      mayfield.add(5);
-      mayfield.add(4);
-      mayfield.add(3);
-      mayfield.add(2);
-      mayfield.add(1);
+      meepo.add(2,88);
+      System.out.println("Printing SuperArray meepo post-insert...");
+      System.out.println(meepo);
 
-      System.out.println("Printing populated SuperArray mayfield...");
-      System.out.println(mayfield);
+      meepo.add(1,77);
+      System.out.println("Printing SuperArray meepo post-insert...");
+      System.out.println(meepo);
 
-      mayfield.remove(3);
-      System.out.println("Printing SuperArray mayfield post-remove...");
-      System.out.println(mayfield);
-      mayfield.remove(3);
-      System.out.println("Printing SuperArray mayfield post-remove...");
-      System.out.println(mayfield);
-
-      mayfield.add(3,99);
-      System.out.println("Printing SuperArray mayfield post-insert...");
-      System.out.println(mayfield);
-
-      mayfield.add(2,88);
-      System.out.println("Printing SuperArray mayfield post-insert...");
-      System.out.println(mayfield);
-
-      mayfield.add(1,77);
-      System.out.println("Printing SuperArray mayfield post-insert...");
-      System.out.println(mayfield);
-
-      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~|~~~~~~~~*/
+    //  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~|~~~~~~~~*/
   }//end main()
 
 
