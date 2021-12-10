@@ -1,4 +1,4 @@
-/// TNGP: Puntu (Anjini Katari, Jacc Chen)
+// TNGP: Puntu (Anjini Katari, Jacc Chen)
 // APCS1 pd7
 // HW45 -- Array of Titanium
 // 2021-12-08
@@ -87,14 +87,7 @@ public class SuperArray implements ListInt
 
   //adds an item after the last item
   public boolean add( int newVal ) {
-    int[] mouse = new int[_size + 1];
-    for (int i = 0; i < _size; i++) {
-      mouse[i] = _data[i];
-    }
-    mouse[_size] = newVal;
-    _data = mouse;
-    _size += 1;
-    System.out.println(_size);
+    add(_size, newVal);
     return true;
   } // add
 
@@ -117,7 +110,7 @@ public class SuperArray implements ListInt
 
   //removes the item at index
   //shifts elements left to fill in newly-empted slot
-  public void remove( int index ) {
+  public int remove( int index ) {
     int[] capybara = new int[_size - 1];
     for (int i = 0; i < index; i++) {
       capybara[i] = _data[i];
@@ -127,6 +120,7 @@ public class SuperArray implements ListInt
     }
     _data = capybara;
     _size -= 1;
+    return _size;
   } // remove
 
 
@@ -141,7 +135,7 @@ public class SuperArray implements ListInt
   //main method for testing
   public static void main( String[] args )
   {
-      SuperArray meepo = new SuperArray();
+      ListInt meepo = new SuperArray();
       System.out.println("Printing empty SuperArray meepo...");
       System.out.println(meepo);
 
