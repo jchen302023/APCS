@@ -1,7 +1,7 @@
 
 // TNPG: Puntu (Anjini Katari, Jacc Chen)
 // APCS pd7
-// HW47 -- Guess Again 
+// HW47 -- Guess Again
 // 2021-12-15w
 // time spent: _ hrs
 
@@ -47,10 +47,13 @@ public class GuessNumber
     _lo = Math.min(a,b);
     _hi = Math.max(a,b);
     _guessCtr = 1;
-
+    _randomNum = Math.Random() * ((_hi - _lo) + 1) + _lo;
     //pick random number in range [a,b]
 
-    /* YOUR CODE HERE */
+    /* Math.Ran returns 0.0 - 1.0, not including 1.0
+       Math.Ran returns 0 -> _lo
+       Math.Ran returns value close to 1.0, java rounds up 1 so it can be _hi 
+    */
   }
 
 
