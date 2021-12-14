@@ -47,12 +47,12 @@ public class GuessNumber
     _lo = Math.min(a,b);
     _hi = Math.max(a,b);
     _guessCtr = 1;
-    _randomNum = Math.Random() * ((_hi - _lo) + 1) + _lo;
+    _target = Math.Random() * ((_hi - _lo) + 1) + _lo;
     //pick random number in range [a,b]
 
     /* Math.Ran returns 0.0 - 1.0, not including 1.0
        Math.Ran returns 0 -> _lo
-       Math.Ran returns value close to 1.0, java rounds up 1 so it can be _hi 
+       Math.Ran returns value close to 1.0, java rounds up 1 so it can be _hi
     */
   }
 
@@ -68,7 +68,7 @@ public class GuessNumber
 
     //3 cases: we either found it, too hi, too lo
 
-    /* YOUR CODE HERE */
+
   }
 
 
