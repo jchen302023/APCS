@@ -47,7 +47,7 @@ public class GuessNumber
     _lo = Math.min(a,b);
     _hi = Math.max(a,b);
     _guessCtr = 1;
-    _target = (int) Math.random() * ((_hi - _lo) + 1) + _lo;
+    _target = (int) (Math.random() * ((_hi - _lo) + 1)) + _lo;
     //pick random number in range [a,b]
 
     /* Math.Ran returns 0.0 - 1.0, not including 1.0
@@ -68,16 +68,25 @@ public class GuessNumber
 
     //3 cases: we either found it, too hi, too lo
     if ( guess == _target) {
+      System.out.println("Correct! It took you " + _guessCtr + " guesses.");
+      if (_guessCtr > 4) {
+        System.out.println("You should git gud.");
+      }
       return;
     } // if too high
     if ( guess < _target) {
-      System.out.println( "Too low");
+      System.out.println("Too low");
       _lo = guess + 1;
       _guessCtr += 1;
       playRec();
     } // if too low
-
-  }
+    if ( guess > _target) {
+      System.out.println("Too high");
+      _hi = guess - 1;
+      _guessCtr += 1;
+      playRec();
+    } // if too high
+  } // play rec 
 
 
   /*==================================================
@@ -106,8 +115,8 @@ public class GuessNumber
   public void play()
   {
     //use one or the other below:
-    //playRec();
-    playIter();
+    playRec();
+    //playIter();
   }
 
 
@@ -115,12 +124,13 @@ public class GuessNumber
   public static void main( String[] args )
   {
     /*-----------------------------
+        -----------------------------*/
     //instantiate a new game
     GuessNumber g = new GuessNumber(1,100);
 
     //start the game
     g.play();
-    -----------------------------*/
+
   }
 
 }//end class GuessNumber
