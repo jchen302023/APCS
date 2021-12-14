@@ -47,7 +47,7 @@ public class GuessNumber
     _lo = Math.min(a,b);
     _hi = Math.max(a,b);
     _guessCtr = 1;
-    _target = Math.Random() * ((_hi - _lo) + 1) + _lo;
+    _target = (int) Math.random() * ((_hi - _lo) + 1) + _lo;
     //pick random number in range [a,b]
 
     /* Math.Ran returns 0.0 - 1.0, not including 1.0
@@ -61,13 +61,21 @@ public class GuessNumber
     void playRec() -- Prompts a user to guess until guess is correct.
     Uses recursion.
     ==================================================*/
-  public void playRec()
-  {
+  public void playRec() {
+
     System.out.print("Guess a num bt " + _lo + " & " + _hi + ": ");
     int guess = sc.nextInt();
 
     //3 cases: we either found it, too hi, too lo
-
+    if ( guess == _target) {
+      return;
+    } // if too high
+    if ( guess < _target) {
+      System.out.println( "Too low");
+      _lo = guess + 1;
+      _guessCtr += 1;
+      playRec();
+    } // if too low
 
   }
 
