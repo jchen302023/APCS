@@ -25,6 +25,7 @@
     * Don't overthink things too much, bad for brain
     * Check closet for skeletons
     * Java rounds at the very end when there is (int) at beginning of operations 
+    * You can use return; to break while loop 
 
     QCC:
     * (From QAF) What happens if _hi and _lo are equal?
