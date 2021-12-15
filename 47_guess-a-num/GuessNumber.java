@@ -22,8 +22,12 @@
 
 /***
     DISCO:
+    * Don't overthink things too much, bad for brain
+    * Check closet for skeletons
+    * Java rounds at the very end when there is (int) at beginning of operations 
 
     QCC:
+    * (From QAF) What happens if _hi and _lo are equal?
 
  ***/
 import java.util.Scanner;
@@ -69,11 +73,11 @@ public class GuessNumber
     //3 cases: we either found it, too hi, too lo
     if ( guess == _target) {
       System.out.println("Correct! It took you " + _guessCtr + " guesses.");
-      if (_guessCtr > 4) {
+      if (_guessCtr > 5) {
         System.out.println("You should git gud.");
       }
       return;
-    } // if too high
+    } // if correct
     if ( guess < _target) {
       System.out.println("Too low");
       _lo = guess + 1;
@@ -86,7 +90,7 @@ public class GuessNumber
       _guessCtr += 1;
       playRec();
     } // if too high
-  } // play rec 
+  } // play rec
 
 
   /*==================================================
@@ -104,19 +108,35 @@ public class GuessNumber
 
       //3 cases: we either found it, too hi, too lo
 
-      /* YOUR CODE HERE */
+      if ( guess == _target) {
+        System.out.println("Correct! It took you " + _guessCtr + " guesses.");
+        if (_guessCtr > 5) {
+          System.out.println("You should git gud.");
+        }
+        return;
+      } // if correct
+      if ( guess < _target) {
+        System.out.println("Too low");
+        _lo = guess + 1;
+        _guessCtr += 1;
+      } // if too low
+      if ( guess > _target) {
+        System.out.println("Too high");
+        _hi = guess - 1;
+        _guessCtr += 1;
+      } // if too high
 
       _guessCtr++;
     }
-  }
+  } // play iter
 
 
   //wrapper for playRec/playIter to simplify calling
   public void play()
   {
     //use one or the other below:
-    playRec();
-    //playIter();
+    //playRec();
+    playIter();
   }
 
 
