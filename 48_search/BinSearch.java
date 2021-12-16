@@ -3,6 +3,8 @@
    Binary search on array of Comparables
 **/
 
+// in terminal do javac [filename].java -Xlint:unchecked to see warnings
+
 public class BinSearch
 {
 
@@ -16,8 +18,8 @@ public class BinSearch
   {
     //uncomment exactly 1 of the 2 stmts below:
 
-    return binSearchIter( a, target, 0, a.length-1 );
-    //return binSearchRec( a, target, 0, a.length-1 );
+    //return binSearchIter( a, target, 0, a.length-1 );
+    return binSearchRec( a, target, 0, a.length-1 );
   }
 
 
@@ -30,6 +32,22 @@ public class BinSearch
 
     int m = (lo + hi) / 2; //init mid pos var
 
+    if (a[m].compareTo(target) == 0) {
+      tPos = m;
+    }
+    // value at mid index higher than target
+    if (a[m].compareTo(target) > 0) {
+      hi = (int) (hi / 2);
+      m = (lo + hi) / 2;
+      binSearchIter(a, target, lo, hi);
+    }
+
+    // value at mid index lower than target
+    if (a[m].compareTo(target) < 0) {
+      lo = (int) (m + (lo / 2));
+      m = (lo + hi) / 2;
+      binSearchIter(a, target, lo, hi);
+    }
 
 
     return tPos;
@@ -44,16 +62,23 @@ public class BinSearch
     int tPos = -1; //init return var to flag value -1
     int m = (lo + hi) / 2; //init mid pos var
 
-    while( /* ? */ ) { // run until lo & hi cross
+    while( lo != hi ) { // run until lo & hi cross
 
       //update mid pos var
-
+      m = (lo + hi) / 2;
       // target found
-
+      if (a[m].compareTo(target) == 0) {
+        return m;
+      }
       // value at mid index higher than target
+      if (a[m].compareTo(target) > 0) {
+        hi = (int) (hi / 2);
+      }
 
       // value at mid index lower than target
-
+      if (a[m].compareTo(target) < 0) {
+        lo = (int) (m + (lo / 2));
+      }
     }
     return tPos;
   }//end binSearchIter
@@ -95,7 +120,7 @@ public class BinSearch
   public static void main ( String[] args )
   {
 
-    /*----------------------------------------------------
+
 
     //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     System.out.println("\nNow testing binSearch on Comparable array...");
@@ -135,6 +160,7 @@ public class BinSearch
 
     //search for 43 in array
     System.out.println( binSearch(iArr3,43) );
+    /*----------------------------------------------------
     ====================================================*/
 
 
