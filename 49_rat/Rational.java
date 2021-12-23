@@ -1,7 +1,7 @@
-// TNPG: Puntu (Anjini Katari, Jacc Chen)
-// APCS p7
-// HW42 -- Be more rational
-// 2021-12-02
+// TNPG: Puntu (Anjini Katari, Jacc Chen) + (With aid from Raven Tang of neighboring clan UnUptown Leopard Rock)
+// APCS pd7
+// HW49 -- Rational standards compliance
+// 2021-12-22
 
 /**
  * class Rational (v1)
@@ -11,8 +11,9 @@
  * division
 
 DISCO:
-* using this. makes things more precise so that there are fewer mess ups in the future
-* (double) a / b is the same as (double) a / (double) b
+* [Object] instanceof [Class] returns boolean
+* The new compareTo method would test if the two objects are equal. It short circuits if the object you are comparing it with is not of the same class.
+* It returns 10 rather than -1,1, or 0
 
  **/
 
@@ -162,7 +163,7 @@ public int compareTo(Object x) {
     return 0;
   }
   return 10;
-} // compareTO
+} // compareTo method for objects
 
   //main method for testing
   public static void main( String[] args )
