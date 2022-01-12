@@ -12,7 +12,6 @@
  * If the best and worst case are the same scenario, is it considered a moot case?
  * If a method is inside another method with a different Big O classification,
   which one determines the big O classification as a whole?
- * forgor 
  **********************************************/
 
 
