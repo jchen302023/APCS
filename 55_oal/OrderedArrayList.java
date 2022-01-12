@@ -5,7 +5,14 @@
 
 /**********************************************
  * DISCO:
+ * Big O tracks the # of times the program repeats itself
+ * Bubble sort can be of the vanilla flavor or exit-early flavor
+ * Big O can have the same classification for the best and worst cases
  * QCC:
+ * If the best and worst case are the same scenario, is it considered a moot case?
+ * If a method is inside another method with a different Big O classification,
+  which one determines the big O classification as a whole?
+ * forgor 
  **********************************************/
 
 
@@ -115,7 +122,7 @@ public class OrderedArrayList
   * Best Case: index is the last element, index unoccupied
   * Best Case does not involve having to shift elements
   * Worst Case: index is the first element, index occupied
-  * In the Worst Case, every element after the first would have to be shifted 
+  * In the Worst Case, every element after the first would have to be shifted
   */
   public void add( int index, int newVal )
   {
@@ -134,6 +141,13 @@ public class OrderedArrayList
   // inserts newVal at the appropriate index
   // maintains ascending order of elements
   // uses a linear search to find appropriate index
+  /* -- addLinear (void)
+  * Best Case: newVal is the least value, classification of O(1)
+  * In the Best case, it would not have to iterate through the entire array
+  to add the newVal where it belongs
+  * Worst Case: newVal is the greatest value, classification of O(n)
+  * You would have to iterate through the entire array before you can insert
+  */
   public void addLinear(Integer newVal)
   {
     for( int p = 0; p < _data.size(); p++ ) {
@@ -150,6 +164,13 @@ public class OrderedArrayList
   // inserts newVal at the appropriate index
   // maintains ascending order of elements
   // uses a binary search to find appropriate index
+  /* -- addBinary (void)
+  * Best Case: index is the middle element, classification of O(1)
+  * The target is always found in the first search so the method exits early.
+  * Worst Case: index is on either extreme, classification of O(log2(n))
+  * You have to utilize the maximum number of iterations so that the alogrithm can
+  iterate through the array log2(n) times where n is the size of the array.
+  */
   public void addBinary(Integer newVal)
   {
     //initialize high, low, midpt indices
