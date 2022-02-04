@@ -65,6 +65,6 @@ public class StatPrinterApp
     }
     System.out.println( "histogram:" );
     sp2.printHistogram( 50 );
-  }
+  } // main 
 
 }//end StatPrinterApp

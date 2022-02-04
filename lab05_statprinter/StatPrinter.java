@@ -117,7 +117,17 @@ public class StatPrinter {
   // *************** QUESTION 05 **************************
   // precond: longestBar > 0
   public void printHistogram(int longestBar) {
-    /* YOUR IMPLEMENTATION HERE */
+    String s = "";
+    for (int i = 0; i < longestBar + 1; i ++) {
+      if (i < _frequency.size()) {
+        for (int h = 0; h < _frequency.get(i) + 1; h ++) {
+          s += "*";
+        }
+        System.out.println(i + " : " + s);
+        s = "";
+      }
+
+    } // print
   }
 
 }// end class StatPrinter
