@@ -2,7 +2,7 @@
 // APCS pd8
 // L05 -- pulling it together
 // 2022-02-03r
-// time spent: 0.5 hrs
+// time spent: 1 hrs
 
 
 
@@ -22,7 +22,7 @@ an array called localModes.
 
 void PrintHistogram => Iterates through _frequency with a for loop. There is an inner for loop to add stars to each
 bar. We need to scale it with the longst bar, so we take the largest value in frequency and divide it by longestBar to
-get our scale. The number of stars printed would be according to the scale. 
+get our scale. The number of stars printed would be according to the scale.
 
 
 DISCO: * Modified our statprinter to accomodate for the fact that the local mode take sin information
@@ -32,3 +32,4 @@ from the original array and not the frequency array
 
 
 QCC: * Why was it that you want to use the original array to find the local mode instead of _frequency?
+* for getLocalModes(),the method uses isLocalMode() as a helper. getLocalModes() goes through the array n times but isLocalMode() is constant. Does a helper function factor into getLocalModes()'s big O classification
