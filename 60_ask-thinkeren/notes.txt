@@ -1,0 +1,12 @@
+Jack Chen
+APCS
+HW60: A termite is a turtle, a thinker is a turtle
+2022-01-07
+time spent:
+
+Thinker: Can give, receive, or take.
+A thinker with a stack of cards would split it in half and give it to two other thinkers.
+Those two thinkers in turn, would do the same. The process repeats itself until each thinker holds only one card each.
+The thinkers with one card would then return the cards to the thinker they originally got it from. Because the thinker
+is holding one card and arrays with one item are always sorted, the thinker that receives the two cards would have them sorted.
+And so on until it reaches back to the very first thinker, who would receive a sorted deck. 
