@@ -1,17 +1,22 @@
-// Clyde "Thluffy" Sinclair
-// APCS pd0
+// TNPG: AllBread (Samantha Hua, Ivina Wang, Jack Chen)
+// APCS pd7
 // HW52 -- implementing selection sort
 // 2022-01-05w
-// time spent:  hrs
+// time spent: 0.8 hrs
 
 /******************************
  *   class SelectionSort -- implements SelectionSort algorithm
  *
  * ALGO:
- *
- * DISCO
- *
- * QCC
+ * We iterated through each item of the array to check if it was the least value,
+ and if it wasn't, we would swap it with the least value.
+ * DISCO:
+ * You can use foreach loop to create new array list and populate the array with
+ the same values as the original target.
+ * To prevent checking values you already know to be sorted, we utilized maxPos as
+ the starting index of where to start checking. We can do this because maxPos
+ corresponds with how many numbers we know to be sorted
+ * QCC:
  * q0: How many passes to sort n elements?
  * a0: n - 1 passes
  * q1: What do you know after pass p?
@@ -20,6 +25,11 @@
  * a2: After you reach the last item in the array and complete all neccessary swaps
  * q3: What does a pass boil down to?
  * a3: To perform a swap.
+ * We think that BubbleSort's best case scenario would be if the array was already
+  sorted, and that its worst case scenario would be if the array was in descending order
+ * Same thing for SelectionSort. Worst case scenario is any array that is not already sorted
+  because the algorithm iterates through every item regardless. With every pass there is
+  at most one swap so the order of the numbers do not matter.
  ******************************/
 
 
@@ -67,20 +77,30 @@ public class SelectionSort
     //maxPos will point to position of SELECTION (greatest value)
     int maxPos;
 
-    for(int pass = 0; pass < data.size(); pass ++ ) {
-      System.out.println( "\nbegin pass " + (data.size()-pass) );//diag
+    for (int pass = 0; pass < data.size(); pass ++ ) {
+      System.out.println( "\nbegin pass " + (pass) );//diag
+      maxPos = pass;
 
+      for (int i = maxPos; i < data.size(); i ++) {
 
-      for(  ) {
-        System.out.println( "maxPos: " + maxPos );//diag
         System.out.println( data );//diag
-        
 
-      }
+        if (data.get(maxPos).compareTo(data.get(i)) > 0) {
+          maxPos = i;
+        }
 
+        System.out.println( "maxPos: " + maxPos );//diags
+
+      } // for loop
+
+        Comparable currentleast = data.get(maxPos);
+        Comparable origposition = data.get(pass);
+
+        data.set(pass, currentleast);
+        data.set(maxPos, origposition);
 
       System.out.println( "after swap: " +  data );//diag
-    }
+    } // for loop
   }//end selectionSort
 
 
@@ -121,9 +141,11 @@ public class SelectionSort
     System.out.println( "ArrayList coco before sorting:\n" + coco );
     selectionSortV(coco);
     System.out.println( "ArrayList coco after sorting:\n" + coco );
+
+
       ============================================*/
 
-    /*==========for AL-returning methods==========
+
       ArrayList glen = new ArrayList<Integer>();
       glen.add(7);
       glen.add(1);
@@ -142,7 +164,7 @@ public class SelectionSort
       System.out.println( "sorted version of ArrayList coco:\n"
       + cocoSorted );
       System.out.println( "ArrayList coco after sorting:\n" + coco );
-      System.out.println( coco );
+      /*==========for AL-returning methods==========
       ============================================*/
 
   }//end main
