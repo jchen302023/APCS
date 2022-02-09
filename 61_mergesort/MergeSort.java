@@ -1,9 +1,16 @@
+
 /***
   class MergeSort
   Implements mergesort on array of ints.
 
   Summary of Algorithm:
-
+  To merge two sorted arrays:
+  1. compare the first elements of the two arrays. Place the lesser element in the merge array
+  2. compare the first element of each array after the element that was placed in the merge array and place the lesser element in the merge array
+  3. once one array has been exhausted, place the rest of the elements in the other array into the merge array
+  MergeSort Algorithm:
+  1. Split your array in half and sort those two arrays by splitting it in half until only one element is in all the arrays
+  2. once sorted, merge the two splitted arrays
   ***/
 
 public class MergeSort
@@ -17,33 +24,36 @@ public class MergeSort
    ******************************************************/
   private static int[] merge( int[] a, int[] b )
   {
-
-    if (a.length() > b.length()) {
-      int[] longer = a;
-    }
-    else if (b.length() > a.length()) {
-      int[] longer = b;
-    }
-    else {
-      int[] longer = a;
-    }
-    int[] merge = new int[a.length() + b.length()];
-    for (int i = 0; int i < shorter.length(); i ++) {
-      int indexa = 0;
-      int indexb = 0;
+    int[] merge = new int[a.length + b.length];
+    int i = 0;
+    int indexa = 0;
+    int indexb = 0;
+    while(indexa < a.length && indexb < b.length){
       if (a[indexa] > b[indexb]) {
-        indexa += 1;
-        merge.set(i, b[indexb]);
-      }
-      if (a[indexa] < b[indexb]) {
+        merge[i] = b[indexb];
         indexb += 1;
-        merge.set(i, a[indexa]);
+        i++;
       }
       else {
+        merge[i] = a[indexa];
         indexa += 1;
-        merge.set(i, a[indexa]);
+        i++;
       }
     }
+    if(indexa == a.length){
+      while (indexb < b.length){
+        merge[i] = b[indexb];
+        i++;
+        indexb++;
+      }
+    } else{
+      while (indexa < a.length){
+        merge[i] = a[indexa];
+        i++;
+        indexa++;
+      }
+    }
+    return merge;
 
   }//end merge()
 
@@ -55,7 +65,20 @@ public class MergeSort
    ******************************************************/
   public static int[] sort( int[] arr )
   {
-
+    if(arr.length>1){
+      int[] one = new int[arr.length/2];
+      for (int i = 0; i < (arr.length/2); i++){
+        one[i] = arr[i];
+      }
+      int[] two = new int[arr.length-(arr.length/2)];
+      for(int n = (arr.length/2); n < arr.length; n++){
+        two[n-(arr.length/2)] = arr[n];
+      }
+      return merge(sort(one), sort(two));
+    }
+    else {
+      return arr;
+    }
   }//end sort()
 
 
@@ -81,7 +104,7 @@ public class MergeSort
   //main method for testing
   public static void main( String [] args )
   {
-    /*~~~~~~~~~~~~~~ Ye Olde Tester Bar ~~~~~~~~~~~~~~
+    /*~~~~~~~~~~~~~~ Ye Olde Tester Bar ~~~~~~~~~~~~~~*/
       int[] arr0 = {0};
       int[] arr1 = {1};
       int[] arr2 = {1,2};
@@ -107,7 +130,7 @@ public class MergeSort
       printArray( sort( arr5 ) );
       printArray( sort( arr6 ) );
       printArray( sort( arr7 ) );
-      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+      /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
   }//end main()
 
 }//end class MergeSort
