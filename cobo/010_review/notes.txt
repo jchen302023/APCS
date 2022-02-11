@@ -53,4 +53,14 @@ c. double x = sentimentval("good", "bad");
     Instead of using randomAdjective, we would specify if we wanted to use randomPositiveAdj or randomNegativeAdj. There could be another parameter,
     such as true or false, so that true can correspond to positive reviews and false can be for negative reviews
 
-    Activity 4 == Create positive or negative reviews 
+    Activity 4 == Create positive or negative reviews
+
+    1. People would want to boost another person's ego! :) 
+    2. People would want to generate bad reviews to trash on other people.
+    3.
+    4.
+    5. What does wordOne = wordOne.subString(1) do?
+    It returns all the characters following index 1
+    6. Why was it neccesary to remove the *?
+    The word would not be found in the file since for example, the code would not see "*dog" to be the same as "dog" and no sentiment value would be returned
+    7.
