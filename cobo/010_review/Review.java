@@ -210,13 +210,30 @@ public class Review {
 
   public static String fakeReview(String fileName) {
     String text = textToString(fileName);
-    text.indexOf(i,
+    int counter= 0;
+    int i = 0;
+    int adjloc = 0;
+    String total = "";
+    text.indexOf("*", i);
+    while (i < text.length()) {
+      if ((text.substring(i,i+1)).equals("*")) {
+        adjloc = text.indexOf("*", i);
+        total = total + text.substring(i - counter, adjloc) + randomAdjective();
+        i += randomAdjective().length() - 1;
+        counter = 0;
+      }
+      counter = counter +1;
+      i ++;
+    }
+    return total;
   }
+
   public static void main(String[] args){
     System.out.println(sentimentVal("absence") + " ... should return -0.8");
     System.out.println(sentimentVal("christopher") + " ... should return 0.35");
     System.out.println(sentimentVal("salmon") + " ... should return -0.1");
     System.out.println("Review of blobfish... " + totalSentiment("blobFish.txt"));
     System.out.println("Review of blobfish... in stars! " + starRating("blobFish.txt"));
+    System.out.println("Fake review... " + fakeReview("blobFish.txt"));
   }
 }
