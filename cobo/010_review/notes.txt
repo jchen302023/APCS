@@ -49,4 +49,8 @@ c. double x = sentimentval("good", "bad");
     Non-static methods can call both static and non-static methods. However, static methods can only call
     other static methods.
 
-  6.
+  6. Describe how fakeReview can be modified to make a positive or negative review.
+    Instead of using randomAdjective, we would specify if we wanted to use randomPositiveAdj or randomNegativeAdj. There could be another parameter,
+    such as true or false, so that true can correspond to positive reviews and false can be for negative reviews
+
+    Activity 4 == Create positive or negative reviews 
