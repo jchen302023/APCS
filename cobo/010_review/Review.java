@@ -208,7 +208,7 @@ public class Review {
     else {return 0;}
   } // star ratings
 
-  public static String fakeReview(String fileName) {
+  public static String fakeReview(String fileName, int type) {
     String text = textToString(fileName);
     int i = 0;
     String total = "";
@@ -218,7 +218,16 @@ public class Review {
         int n = i;
         while (n < text.length()){
           if((text.substring(n, n+1).equals(" "))){
-            total = total + randomAdjective();
+            String adj;
+            if (type == 0){
+              adj = randomPositiveAdj();
+            }
+            else if (type == 1){
+              adj = randomNegativeAdj();
+            } else {
+              adj = randomAdjective();
+            }
+            total = total + adj;
             i = n-1;
             break;
           }
@@ -240,6 +249,6 @@ public class Review {
     System.out.println(sentimentVal("salmon") + " ... should return -0.1");
     System.out.println("Review of blobfish... " + totalSentiment("blobFish.txt"));
     System.out.println("Review of blobfish... in stars! " + starRating("blobFish.txt"));
-    System.out.println("Fake review... " + fakeReview("blobFish.txt"));
+    System.out.println("Fake review... " + fakeReview("blobFish.txt", 0));
   }
 }

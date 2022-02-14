@@ -65,7 +65,7 @@ c. double x = sentimentval("good", "bad");
     and if the word from the string is between a "*" and a " ", replace the word with a random positive adj. If the user inputs neg, and the word
     from the string is between a "*" and " ", replace it with a random negative adj. Else, replace that word with a random adj. If the word does not have
     a "*" in front of it, add it to the string total. Once the method iterates through the entire string, it would return the string total which
-    has the generated review. 
+    has the generated review.
 
     5. What does wordOne = wordOne.subString(1) do?
     It returns all the characters following index 1
