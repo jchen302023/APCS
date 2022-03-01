@@ -1,0 +1,26 @@
+Lauren Lee, Jack Chen
+TNPG: Pikovo
+APCS
+HW67 -- A Knight Goes on Tour
+2022-02-28
+time spent:
+
+Givens/ Asssumptions
+- The knight starts in one of the four corners of the board
+- It is an empty n by n board
+- The knight can not cross a previously crossed place on the board or a place out of the board
+- The knight can only move in an L shape (+-2, +- 1) or (+-1, +-2) so it would have 8 possible places
+to move to
+Goal
+- The knight has travelled across the board without crossing a place it had previously
+been at, so all spaces on the board have been filled
+
+Finished Product
+- Print out the board with numbers representing the knight's move as it has travelled on it
+
+Algo:
+
+- Starting from the corner, you move the knight clockwise in a spiraling motion to fill the outer spaces of the board.
+The outer ring of spaces takes priority to be completed. If the outer ring the knight plans to move appears to have no available spots, it
+would move to the next inner ring and fill that one until an opportunity to enter the outer ring appears again. Once the outer rings are completely filled,
+it would go to the inner rings and repeat the process until the ring is filled. 
