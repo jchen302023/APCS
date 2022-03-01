@@ -5,7 +5,7 @@ HW67 -- A Knight Goes on Tour
 2022-02-28
 time spent: 1.5 hr
 
-Givens/ Asssumptions
+Givens/ Assumptions
 - The knight starts in one of the four corners of the board
 - It is an empty n by n board
 - The knight can not cross a previously crossed place on the board or a place out of the board
