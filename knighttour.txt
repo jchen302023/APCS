@@ -3,7 +3,7 @@ TNPG: Pikovo
 APCS
 HW67 -- A Knight Goes on Tour
 2022-02-28
-time spent:
+time spent: 1.5 hr
 
 Givens/ Asssumptions
 - The knight starts in one of the four corners of the board
@@ -23,4 +23,21 @@ Algo:
 - Starting from the corner, you move the knight clockwise in a spiraling motion to fill the outer spaces of the board.
 The outer ring of spaces takes priority to be completed. If the outer ring the knight plans to move appears to have no available spots, it
 would move to the next inner ring and fill that one until an opportunity to enter the outer ring appears again. Once the outer rings are completely filled,
-it would go to the inner rings and repeat the process until the ring is filled. 
+it would go to the inner rings and repeat the process until the ring is filled.
+
+=> But it does not always work for the even board. The last place the knight would be at in a odd board would be in the center of the board. However,
+an even board does not have a center. As the knight travels and the outer rings are filled, the untravelled region reduces itself into a smaller even
+board, such as a 2x2 or a 4x4 which is impossible to traverse.
+
+Similar to nQueens:
+- Uses recursion to create a tree with different possibilities. It backtracks if the node leads to an inviable solution
+- Marks places where new pawns can be placed
+Different from nQueens:
+- Knights can only reduce the size of the board by 1 and the knights are more restricted in their movement patterns
+- Queens can be palced anywhere on the board and when they are placed, they reduce the size of the board by a column
+- Knights only marks the place a knight has traversed before
+- Queens marks the place where the queen is and the possible places it can travel 
+
+Testing:
+- 5x5 and 7x7 works
+- 2x2, 3x3, 4x4 don't work
