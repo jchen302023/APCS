@@ -66,14 +66,14 @@ public class KnightTour
 
     //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     //for fixed starting location, use line below:
-    tf.findTour( 2, 2, 1 );
+    // tf.findTour( 4, 4, 1 );
     //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
     //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     //for random starting location, use lines below:
-    //int startX = (int) (Math.random() *n)+2;
-    //int startY = (int) (Math.random() *n)+2;
-    //tf.findTour( startX, startY, 1 );   // 1 or 0 ?
+    int startX = (int) (Math.random() *n)+2;
+    int startY = (int) (Math.random() *n)+2;
+    tf.findTour( startX, startY, 1 );   // 1 or 0 ?
     //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
     //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -190,7 +190,7 @@ class TourFinder
     }
     //other base case: stepped off board or onto visited cell
     if ( _board[x][y] == -1 || _board[x][y] != 0 ) {
-      System.out.println( this );
+      // System.out.println( this );
       return;
     }
     //otherwise, mark current location
@@ -200,7 +200,7 @@ class TourFinder
       //mark current cell with current move number
       _board[x][y] = moves;
 
-      System.out.println( this ); //refresh screen
+    //  System.out.println( this ); //refresh screen
 
       //delay(1000); //uncomment to slow down enough to view
 
@@ -227,7 +227,7 @@ class TourFinder
       // (Overwrite number at this cell with a 0.)
       _board[x][y] = 0;
 
-      System.out.println( this ); //refresh screen
+    //  System.out.println( this ); //refresh screen
     }
   }//end findTour()
 
