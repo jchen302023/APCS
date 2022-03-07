@@ -24,7 +24,6 @@ public class fibonacci {
     System.out.println(fibonacci(2));
     System.out.println(fibonacci(3));
     System.out.println(fibonacci(4));
-
   }
 
 }
