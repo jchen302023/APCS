@@ -1,0 +1,19 @@
+
+-1 => occupied space
+0 => unoccupied space
+1 => occupied by queen
+
+placeQueen
+  Preconds: Less than the maximum amount of queens have been placed on the board
+  Postconds: A queen is placed at the position and is indicated with a one if it is an occupiable space. All
+  spaces that the queen can attack are marked with -1 to indicate that it is unoccupiable.
+  Summary: If the space is unoccupiable, represented by a 1 or -1, then no queen can be placed there and it returns false. Otherwise, the space given
+  would be assigned to 1 and spaces on the row to the right of the queen would be assigned -1 and the diagonal to the right-down
+  would also be assigned -1. It then returns true.
+removeQueen
+  Preconds: n/a
+  Postconds: If a queen is at the specified place indicated with a 1, remove the queen and make the areas where
+  the queen can attack, indicated by a -1, into a 0, which makes them occupiable again.
+  Summary: If the space is not occupied, indicated by 0, nothing would happen and it returns false. If the space has a queen,
+  then the space occupied by the queen would be turned into a 0, making it occupiable. The diagonals and rows the queen can attack
+  indicated by -1 are turned into 0 so that they are occupiable again. It then returns true.
