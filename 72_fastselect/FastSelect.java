@@ -16,6 +16,7 @@ if s = y return? :)
 Best Case: O(n)
 Worst Case: O(n^2)
 Average Case: O(n * logn)
+
 DISCO:
   * Optimation is hard.
   * The return value of s is where the pivot is after the array has been split. The value at index s in the array is at its sorted position 
