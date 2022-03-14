@@ -3,7 +3,7 @@ TNPG: BrainForked (Gloria Lee, John Gupta-She, Jack Chen)
 APCS pd08
 HW75
 2022-03-13
-time spent: 1 hr 
+time spent: 1 hr n
 /***
  * class LLNode
  * Implements a node, for use in lists and other container classes.
