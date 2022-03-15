@@ -3,6 +3,7 @@
 //HW76 -- We Got a Little Old Convoy 
 //2022-03-11f
 //time spent: 1.1 hrs 
+//KTS used: 1 page (each)
 
 /***
  * class LLNode
@@ -13,7 +14,7 @@
 public class LLNode
 {
   //instance vars
-  private String _cargo;
+  private String _cargo; 
   private LLNode _nextNode;
 
   // constructor
