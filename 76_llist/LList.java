@@ -1,3 +1,10 @@
+//TNPG: BrainForked
+//APCS pd8
+//HW76 -- We Got a Little Old Convoy 
+//2022-03-11f
+//time spent: 1.1 hrs 
+//KTS used: 1 page (each)
+
 /***
  * class LList
  * Implements a linked list of LLNodes, each containing String data
