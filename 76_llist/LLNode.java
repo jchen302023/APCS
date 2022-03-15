@@ -1,8 +1,8 @@
-//Clyde Sinclair
-//APCS pd0
-//HW75 -- Node for a linked list
+//TNPG: BrainForked
+//APCS pd8
+//HW76 -- We Got a Little Old Convoy 
 //2022-03-11f
-//time spent: _h
+//time spent: 1.1 hrs 
 
 /***
  * class LLNode
