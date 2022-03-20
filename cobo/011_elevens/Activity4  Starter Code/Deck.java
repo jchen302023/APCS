@@ -62,6 +62,36 @@ public class Deck {
 	 * and reset the size to represent the entire deck.
 	 */
 	public void shuffle() {
+		List<Card> shuffled; 
+		shuffled = new ArrayList<Card>(); 
+		// cards = new ArrayList<Card>();
+		
+		
+		for (Card origcards : cards) {
+			shuffled.add(origcards);
+		}
+		
+		
+		int k = 0; 
+		System.out.println("Second part");
+		for (int i = 0; i < (cards.size() + 1)/2; i ++) {
+				shuffled.set(k, cards.get(i)); 
+				k += 2; 
+		}
+		int j = 1; 
+		System.out.println("Second part");
+		for (int h = (cards.size() + 1)/2; h < cards.size(); h ++) {
+			if (j < cards.size()) {
+				shuffled.set(j, cards.get(h));
+				j +=2; 
+			}
+		
+		}
+		// System.out.println("Shuffled: " +shuffled[0]+shuffled[1]+shuffled[2]+shuffled[3]);
+		
+		for(int i = 0; i<cards.size() ; i++){
+			cards.set(i, shuffled.get(i));
+		}
 		/* *** TO BE IMPLEMENTED IN ACTIVITY 4 *** */
 	}
 
