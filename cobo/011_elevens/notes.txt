@@ -1,0 +1,21 @@
+TNPG: BrainForked (Gloria Lee, John Gupta-She, Jack Chen)
+APCS pd 08
+HW -- lab07
+2022-03-19
+time spent: 
+
+Activity 2 Questions:
+
+1) A deck is a list that contains cards objects.
+2) Deck d contains 18 cards 
+3) Deck twentyOnePilots = new Deck(ranks, suits, values)
+   String[] ranks = {"Ace," "King", "Queen", "Judge", "10", "9", "8", "7", "6", "5", "4", "3", "2"}
+   String[] suits = {Spades, Hearts, Diamonds, Clubs}
+   String[] values = {}
+4) No.
+
+Activity 3 Questions: 
+
+1)
+2)
+3)
