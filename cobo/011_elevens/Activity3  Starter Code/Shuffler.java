@@ -54,23 +54,26 @@ public class Shuffler {
 	public static void perfectShuffle(int[] values) {
 		int[] shuffled = new int[values.length]; 
 		int k = 0; 
+		System.out.println("Second part");
 		for (int i = 0; i < (values.length + 1)/2; i ++) {
-			if (k < (values.length + 1)/2) {
 				shuffled[k] = values[i]; 
 				k += 2; 
-			}
-			else { return; }
-		
 		}
 		int j = 1; 
+		System.out.println("Second part");
 		for (int h = (values.length + 1)/2; h < values.length; h ++) {
 			if (j < values.length) {
 				shuffled[j] = values[h];
 				j +=2; 
 			}
-			else { return; }
+
 		}
-		values = shuffled; 
+		System.out.println("Shuffled: " +shuffled[0]+shuffled[1]+shuffled[2]+shuffled[3]);
+
+		for(int i = 0; i<shuffled.length ; i++){
+			values[i]=shuffled[i];
+		}
+		
 		/* *** TO BE IMPLEMENTED IN ACTIVITY 3 *** */
 	}
 
@@ -86,6 +89,17 @@ public class Shuffler {
 	 * @param values is an array of integers simulating cards to be shuffled.
 	 */
 	public static void selectionShuffle(int[] values) {
+	
+			for (int i = values.length - 1; i > 0; i --) {
+				int r = (int) (Math.random() * (i - 1)); 
+			
+				int pos1 = values[i];
+				int pos2 = values[r]; 
+				values[i] = pos2;
+				values[r] = pos1; 
+			}
+		
+			
 		/* *** TO BE IMPLEMENTED IN ACTIVITY 3 *** */
 	}
 }
