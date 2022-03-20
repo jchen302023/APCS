@@ -184,6 +184,7 @@ public class ElevensBoard {
 	 *         false otherwise.
 	 */
 	public boolean isLegal(List<Integer> selectedCards) {
+			
 		/* *** TO BE IMPLEMENTED IN ACTIVITY 9 *** */
 	}
 
@@ -218,6 +219,16 @@ public class ElevensBoard {
 	 *              contain an 11-pair; false otherwise.
 	 */
 	private boolean containsPairSum11(List<Integer> selectedCards) {
+		int total = 0; 
+	  for (Integer index : selectedCards) {
+			total += cards.get(index); 
+		}
+		
+		if (total == 11) {
+			return true;
+		}
+		else {return false;}
+		
 		/* *** TO BE IMPLEMENTED IN ACTIVITY 9 *** */
 	}
 
@@ -230,6 +241,7 @@ public class ElevensBoard {
 	 *              include a jack, a queen, and a king; false otherwise.
 	 */
 	private boolean containsJQK(List<Integer> selectedCards) {
+		
 		/* *** TO BE IMPLEMENTED IN ACTIVITY 9 *** */
 	}
 }

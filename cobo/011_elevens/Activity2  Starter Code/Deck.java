@@ -34,11 +34,9 @@ public class Deck {
 		cards = new ArrayList<Card>();  
 		for (int i = 0; i < ranks.length; i ++) {
 			for (int h = 0; h < suits.length; h ++) {
-				for (int j = 0; j < values.length; j ++) {
-					Card newCard = new Card(ranks[i], suits[h], values[j]); 
+					Card newCard = new Card(ranks[i], suits[h], values[i]); 
 					cards.add(newCard); 
 					size += 1; 
-				}
 			}
 		}
 

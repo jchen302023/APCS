@@ -91,7 +91,7 @@ public class Shuffler {
 	public static void selectionShuffle(int[] values) {
 	
 			for (int i = values.length - 1; i > 0; i --) {
-				int r = (int) (Math.random() * (i - 1)); 
+				int r = (int) (Math.random() * (i +1)); 
 			
 				int pos1 = values[i];
 				int pos2 = values[r]; 

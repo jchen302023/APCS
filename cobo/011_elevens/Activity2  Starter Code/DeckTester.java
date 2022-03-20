@@ -13,7 +13,10 @@ public class DeckTester {
 		int[] values = {2, 1 ,6}; 
 		Deck decker = new Deck(ranks, suits, values);
 		System.out.println(decker);
-		System.out.println(decker.deal()); 
+		System.out.println(decker.deal());
+		System.out.println(decker.isEmpty());
+		System.out.println(decker.size());
+		 
 		/* *** TO BE IMPLEMENTED IN ACTIVITY 2 *** */
 	}
 }
