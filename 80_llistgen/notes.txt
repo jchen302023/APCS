@@ -1,0 +1,13 @@
+
+// Team BrainForked (Gloria Lee, Jack Chen, John Gupta-She)
+// APCS pd8
+// HW80: Generically Speaking
+// 2022-03-24r
+// time spent: 1  hr
+
+DISCO:
+- It's not enough to change all instances of String to T. We also have to switch DLLNode to DLLNode<T> and List to List<T> etc.
+
+
+QCC:
+- How can we implement Iterator into LList to expand on LList methods and usefulness?
