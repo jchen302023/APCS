@@ -1,0 +1,14 @@
+// Team BrainForked (Gloria Lee, Jack Chen, John Gupta-She)
+// APCS pd8
+// HW82: Roll Your Own Iterator
+// 2022-03-27
+// time spent: 1  hr
+
+DISCO:
+- always helpful to refer back to List interface for guidelines on general outline of code
+- My brain's 1.5 braincells melted into 1.5 braincells
+
+QCC:
+- why the infinite loop when running v6driver? something wrong with our remove method?
+- why so many iterators and why can't you typecast MyIterator
+- the purpose of returning iterator over list?
