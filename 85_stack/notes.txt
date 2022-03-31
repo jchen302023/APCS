@@ -1,0 +1,13 @@
+// Team BrainForked (Gloria Lee, Jack Chen, John Gupta-She)
+// APCS pd8
+// HW85: Leon Leonwood Stack
+// 2022-03-30w
+// time spent: 0.5 hrs
+
+
+DISCO:
+- Could not find symbol Z, had to be changed to String, or another data type like Integer.
+
+QCC:
+- Benefits of using arraylist vs linkedlist stack?
+- Ways to break our code?
