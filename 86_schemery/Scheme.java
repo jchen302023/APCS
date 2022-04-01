@@ -31,12 +31,11 @@ public class Scheme
    *           evaluate( "( + 4 3 )" ) -> 7
    *	         evaluate( "( + 4 ( * 2 5 ) 3 )" ) -> 17
    **/
-  static int ret; 
+  static int ret = 0; 
   public static String evaluate( String expr )
   {
     LLStack stacko = new LLStack<String>();
     String[] dummy = expr.split("\\s+"); 
-    ret = 0; 
     for(int i = dummy.length- 1; i > 0; i --){
       stacko.push(dummy[i]); 
       }

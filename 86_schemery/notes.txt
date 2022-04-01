@@ -11,5 +11,13 @@
  * If the first item is an open parens, pop the first parens off and call unload according to the first operation sign
  * Unload works recursively. If closing parens not reached yet, recursively call unload until it is reached.
  * Once you reach closed parens, return the value of ret as a string 
- * STACK OF CHOICE: LLStack by ______ b/c . . .
+ * STACK OF CHOICE: LLStack by us b/c (and we flipped a coin) LLStacks are better because we don't elements getting jumbled and lost D:
  ******************************************************/
+ 
+ DISCO:
+ - our code compiles, but we run into stack overflow errors, presumably because of a logical error
+ in our code in unload() which is called recursively. But we fixed that but now ret only gives us 0. ): 
+ 
+ QCC:
+ - two stack? one stack?
+ - WHY DONT IT WORK AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
