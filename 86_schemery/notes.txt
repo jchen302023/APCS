@@ -1,0 +1,15 @@
+/******************************************************
+// Team BrainForked (Gloria Lee, Jack Chen, John Gupta-She)
+// APCS pd8
+// HW86: What a Racket
+// 2022-03-31w
+// time spent: 1.5 hrs
+
+ * ALGORITHM for EVALUATING A SCHEME EXPRESSION:
+ * Split the String wherever there is a space into a String[]. 
+ * Push each element of the String[] into a LLStack in reverse order so that the first item of the String[] is at the top of the stack
+ * If the first item is an open parens, pop the first parens off and call unload according to the first operation sign
+ * Unload works recursively. If closing parens not reached yet, recursively call unload until it is reached.
+ * Once you reach closed parens, return the value of ret as a string 
+ * STACK OF CHOICE: LLStack by ______ b/c . . .
+ ******************************************************/
