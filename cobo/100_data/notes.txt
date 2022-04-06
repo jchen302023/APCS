@@ -1,0 +1,60 @@
+Team Phantom Tollbooth :: Clyde Sinclair, Fierce Dragon
+APCS
+LAB08 --
+2022-04-05
+time spent: 2 hrs
+
+
+DISCO
+
+
+QCC
+
+ACTIVITY 1:
+
+1) Google, Youtube, Piazza
+2) Usernames, faces, commercial content
+3) Having a set boundary/limits. Data field need size limits and they are separated by delimiters. 
+4) The file format following the . after the file name i.e. .txt or .java 
+5) Rice, Cats
+6) Which color of cat is the best for children? How much rice can be grown if the entire world was covered in rice?
+   Which color of cat is the best for Stuy students? How much rice can be grown if the entire world was covered in rice?
+7) No. But we found data set on sheep when searching "sheep" and we got an article about Dall sheep's response to snow and landscape covariates 
+  (2005-2008). When searching with keyterm "rice" we found a dataset about Potential impacts of climate change on world's food supply.
+8) The larger the dataset, the less the variability, and a larger sample size. There would be less room for a huge margin of error.
+9) User data is captured by websites by logging search history, customized ads and videos in your browsing session etc. 
+10) Data from the set was collected from a simulation and field research
+11) The benefit of data collection is good for when you are trying to catch a criminal 
+
+ACTIVITY 2:
+
+1) Class name: Cereal
+2) ? :)
+3) public class Cereal
+4) 15 instance variables
+5) String, char, int, float, double
+8) Which cereal has the most calories?
+9) Which of these cereals have the most shrimp tails found in them?
+10) Add a new variable called shrimp tails found in cereal boxes (float)
+
+ACTIVITY 3:
+
+1. Temperature at Atlanta, Hartsfield is 59F
+2. PHSF -- Hawaii
+3. Hawaii 65F
+4. 48
+5. By the wind speed
+6. Pago Pago, AS, Samoa -- NSTU
+
+7. What stations are there in the east? 
+8. Not a lot.
+© 2022 GitHub, Inc.
+Terms
+
+
+<TNPG>'s CSV FLOW:
+<insert your description of your tools and workflow in creating, editing CSV files>
+
+
+TRUBZ
+<this lab involves using tools that are likely to introduce hiccups; log any troubleshooting issues here>
