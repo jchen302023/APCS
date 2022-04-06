@@ -1,14 +1,21 @@
-Team Phantom Tollbooth :: Clyde Sinclair, Fierce Dragon
+Team BrainForked - Gloria Lee, Jack Chen, Hamim Sean
 APCS
-LAB08 --
-2022-04-05
-time spent: 2 hrs
+L08: America's Next Top Data Scientist
+2022-04-06w
+time spent: 3.5 hrs
 
 
-DISCO
-
+DISCO:
+- different commands have to be run when using sinbad in git bash.
+  However, we were able to solve this issue by sshing into lab computers.
+- Have to be careful with brackets when dealing with nested classes/inner classes
+- Look through entire lab to identify most efficient workflow and plan.
 
 QCC
+- Why the difference in commands when using git bash to use sinbad vs lab computers
+- What was able to be run on lab computers could not be run on git bash.
+- ??? --> core.ops.SignatureUnificationException: could not find a class named: Observation (ds:no-class)
+
 
 ACTIVITY 1:
 
@@ -41,28 +48,13 @@ ACTIVITY 3:
 
 1. The temperature at Atlanta, Hartsfield - Jackson Atlanta International Airport, GA is 69.0F
 2. KBFL - The temperature at Bakersfield, Meadows Field Airport, CA is 65.0F
-3.
-String id3 = "KBFL";
-DataSource ds3 = DataSource.connect("http://weather.gov/xml/current_obs/" + id3 + ".xml");
-ds3.setCacheTimeout(15 * 60);
-ds3.load();
-
-Observation ob3 = ds3.fetch("Observation", "weather", "temp_f", "wind_degrees");
-System.out.println(id3 + ": " + ob3);
-
-if (ob1.colderThan(ob2) && ob1.colderThan(ob3)) {
-   System.out.println("Coldest" + id1);
-}
-if (ob2.colderThan(ob1) && ob2.colderThan(ob3)) {
-   System.out.println("Coldest" + id2);
-}
-else  {
-   System.out.println("Coldest" + id3);
-}
+4. 48
+5. You can filter weather stations by the temperature they show.
+6.
 
 
-7. What stations are there in the east?
-8. Not a lot.
+7. What stations are there in the east? What is the average temperature in the east?
+8. ):
 © 2022 GitHub, Inc.
 Terms
 
