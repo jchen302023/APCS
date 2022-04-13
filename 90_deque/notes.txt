@@ -14,3 +14,4 @@ DISCO:
 QCC:
   - worth it to consider an arraylist deque? (no) (eh...) (probably not unless we do a little optimization)
   - why the peekFirst() and peekLast() symbol not found errors at first? (we used peekfirst and peeklast in the remove methods and it created that error)
+  - should we use removeFirstOccurrence() and removeLastOccurrence(), since they are in the API but they mess with stuff beyond just the first and last nodes.
