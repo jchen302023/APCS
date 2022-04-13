@@ -1,0 +1,16 @@
+Team BrainForked (Gloria Lee, Jack Chen, John Gupta-She)
+APCS pd8
+HW90: Swabbing the Deque
+2022-04-12t
+time spent: 0.5  hr
+
+DISCO:
+  Benefits of creating a prioritized todo list:
+  - grow code incrementally. tackle the simplest tasks before 
+  more complex ones
+  - visualize workflow
+  - encapsulation diagrams help decide workflow/remove confusion once coding starts.
+
+QCC:
+  - worth it to consider an arraylist deque? (no) (eh...) (probably not unless we do a little optimization)
+  - why the peekFirst() and peekLast() symbol not found errors at first? (we used peekfirst and peeklast in the remove methods and it created that error)
