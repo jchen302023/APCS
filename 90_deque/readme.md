@@ -1,8 +1,8 @@
-### Team BrainForked (Gloria Lee, Jack Chen, John Gupta-She)
-### APCS pd8
-###  HW90: Swabbing the Deque
-###  2022-04-12t
-###  time spent: 0.5  hr
+#### Team BrainForked (Gloria Lee, Jack Chen, John Gupta-She)
+#### APCS pd8
+####  HW90: Swabbing the Deque
+#### 2022-04-12t
+####  time spent: 0.5  hr
 
 Prioritized todo list:
 0. 
