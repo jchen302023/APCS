@@ -6,7 +6,7 @@
 
 import java.util.LinkedList;
 
-public class YourImplementationOfDeque<KIWI> implements Deque<KIWI> {
+public class OurDeque<KIWI> implements Deque<KIWI> {
   
   LinkedList<KIWI> kiwi = new LinkedList<KIWI>();
   
@@ -47,22 +47,6 @@ public class YourImplementationOfDeque<KIWI> implements Deque<KIWI> {
     return kiwi.size()==0;
   }
 
-  public static void main(String[] args){
-    
-    YourImplementationOfDeque<String> rodent = new YourImplementationOfDeque<String>();
-    rodent.addFirst("mouse");
-    rodent.addFirst("rat");
-    rodent.addLast("weasle");
-    rodent.addLast("weasle");
-    rodent.addLast("rat");
-    // rat mouse weasle weasle rat 
-    
-    System.out.println(rodent.peekLast());
-    System.out.println(rodent.removeLast());
-    System.out.println(rodent.peekFirst());
-    System.out.println(rodent.removeFirst());
-    rodent.removeLastOccurrence("rat");
-    System.out.println(rodent.peekLast());
-  }
+  
   
 }
