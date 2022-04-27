@@ -15,7 +15,7 @@ public class CelebrityGame
 {
 	private Celebrity gameCelebrity;
 
-	 private CelebrityFrame gameWindow;
+	private CelebrityFrame gameWindow;
 
 	private ArrayList<Celebrity> celebGameList;
 
@@ -25,7 +25,8 @@ public class CelebrityGame
 	public CelebrityGame()
 	{
 		celebGameList = new ArrayList<Celebrity>();
-		gameWindow = new CelebrityFrame(this);
+		gameWindow = new CelebrityFrame(this
+		);
 	}
 
 	/**
@@ -68,8 +69,8 @@ public class CelebrityGame
 	public void play()
 	{
 		if (celebGameList != null && celebGameList.size() > 0) {
-			this.gameCelebrity = celebGameList.get(0); 
-			gameWindow.replaceScreen("GAME"); 
+			this.gameCelebrity = celebGameList.get(0);
+			gameWindow.replaceScreen("GAME");
 		}
 	}
 
@@ -90,18 +91,18 @@ public class CelebrityGame
 			currentCelebrity = new LiteratureCelebrity(name, guess);
 		}
 		else if (type.equals("VideoGame")) {
-			currentCelebrity = new VideoGameCelebrity(name, guess); 
+			currentCelebrity = new VideoGameCelebrity(name, guess);
 		}
 		else {
 			currentCelebrity = new Celebrity(name, guess);
 		}
-		this.celebGameList.add(currentCelebrity); 
-		
+		this.celebGameList.add(currentCelebrity);
+
 		// if(validateClue(guess, type)&& validateCelebrity(name)){
 		// 	Celebrity newCeleb = new Celebrity(name, guess);
 		// 	celebGameList.add(newCeleb);
 		// }
-		
+
 	}
 
 	/**
@@ -123,11 +124,11 @@ public class CelebrityGame
 	 */
 	public boolean validateClue(String clue, String type)
 	{
-		boolean validClue = false; 
+		boolean validClue = false;
 		if (clue.trim().length()>=10) {
-			validClue = true; 
+			validClue = true;
 			if (type.equalsIgnoreCase("literature")) {
-				String temp[] = clue.split(","); 
+				String temp[] = clue.split(",");
 				if (temp.length > 1) {
 					validClue = true;
 				}
@@ -136,7 +137,7 @@ public class CelebrityGame
 				}
 			}
 			if (type.equalsIgnoreCase("videogame")) {
-				String temp[] = clue.split(","); 
+				String temp[] = clue.split(",");
 				if (temp.length > 1) {
 					validClue = true;
 				}
@@ -145,7 +146,7 @@ public class CelebrityGame
 				}
 			}
 		}
-			return validClue; 
+			return validClue;
 			// return clue.trim().length()>=10;
 
 	}
