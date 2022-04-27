@@ -11,11 +11,11 @@ To Do List:
 * ~~ Make a celebrity class => Instance vars String name and String clue~~
 * ~~ Work on CelebrityGame => Instant vars ArrayList<Celebrity> CelebrityGameList~~
 * ~~ Work on Game methods: ~~ 
-    - ~~ addCelebrity
-    - ~~ validateCelebrity
-    - ~~ validateClue
-    - ~~ processGuess
-    - ~~ sendClue 
+    - ~~ addCelebrity~~
+    - ~~ validateCelebrity~~
+    - ~~ validateClue~~
+    - ~~ processGuess~~
+    - ~~ sendClue ~~
     - ~~ play(), getCelebrityGameSize()~~
 * ~~ Update CelebrityGame to accomodate for our new flavor of celebrity (VideoGameCeleb)~~
 * ~~ Modify addCelebrity, validateClue~~
