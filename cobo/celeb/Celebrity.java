@@ -1,3 +1,9 @@
+// Team BrainForked (Gloria Lee, Jack Chen, Kevin)
+// APCS pd8
+// L09: Some Folks Call It A Charades
+// 2022-04-26t
+// time spent: 1.5 h
+
 /**
  * Celebrity base class for the Celebrity game.
  * @author cody.henrichsen

@@ -1,3 +1,8 @@
+// Team BrainForked (Gloria Lee, Jack Chen, Kevin)
+// APCS pd8
+// L09: Some Folks Call It A Charades
+// 2022-04-26t
+// time spent: 1.5 h
 import java.util.ArrayList;
 
 /**
@@ -62,7 +67,10 @@ public class CelebrityGame
 	 */
 	public void play()
 	{
-
+		if (celebGameList != null && celebGameList.size() > 0) {
+			this.gameCelebrity = celebGameList.get(0); 
+			gameWindow.replaceScreen("GAME"); 
+		}
 	}
 
 	/**
@@ -77,10 +85,23 @@ public class CelebrityGame
 	 */
 	public void addCelebrity(String name, String guess, String type)
 	{
-		if(validateClue(guess, type)&& validateCelebrity(name)){
-			Celebrity newCeleb = new Celebrity(name, guess);
-			celebGameList.add(newCeleb);
+		Celebrity currentCelebrity;
+		if (type.equals("Literature")) {
+			currentCelebrity = new LiteratureCelebrity(name, guess);
 		}
+		else if (type.equals("VideoGame")) {
+			currentCelebrity = new VideoGameCelebrity(name, guess); 
+		}
+		else {
+			currentCelebrity = new Celebrity(name, guess);
+		}
+		this.celebGameList.add(currentCelebrity); 
+		
+		// if(validateClue(guess, type)&& validateCelebrity(name)){
+		// 	Celebrity newCeleb = new Celebrity(name, guess);
+		// 	celebGameList.add(newCeleb);
+		// }
+		
 	}
 
 	/**
@@ -102,8 +123,30 @@ public class CelebrityGame
 	 */
 	public boolean validateClue(String clue, String type)
 	{
-
-			return clue.trim().length()>=10;
+		boolean validClue = false; 
+		if (clue.trim().length()>=10) {
+			validClue = true; 
+			if (type.equalsIgnoreCase("literature")) {
+				String temp[] = clue.split(","); 
+				if (temp.length > 1) {
+					validClue = true;
+				}
+				else {
+					validClue = false;
+				}
+			}
+			if (type.equalsIgnoreCase("videogame")) {
+				String temp[] = clue.split(","); 
+				if (temp.length > 1) {
+					validClue = true;
+				}
+				else {
+					validClue = false;
+				}
+			}
+		}
+			return validClue; 
+			// return clue.trim().length()>=10;
 
 	}
 
@@ -136,6 +179,6 @@ public class CelebrityGame
 	 */
 	public String sendAnswer()
 	{
-		return null;
+		return gameCelebrity.getAnswer();
 	}
 }

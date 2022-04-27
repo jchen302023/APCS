@@ -1,3 +1,19 @@
+// Team BrainForked (Gloria Lee, Jack Chen, Kevin)
+// APCS pd8
+// L09: Some Folks Call It A Charades
+// 2022-04-26t
+// time spent: 1.5 h
+
+DISCO:
+- create a distinction between the logic behind the code and the execution/functionality of it
+- This was a refresher on inheritance, subclasses, superclasses, super() and overriding methods 
+- Polymorphism = important concept 
+
+QCC:
+- How 2 radio?
+- How 2 make GUI work?
+- Timer using sleep?
+
 Activity 1
 
 1. Possible classes: Game class, Celebrity class, Player class
@@ -28,3 +44,19 @@ Activity 3
 12. The CelebrityGame class handles interaction with the Celebrity objects.
 13. The rest of the GUI only has knowledge of the Celebrity name/clue or whether or not
     the given guess matched.
+    
+Activity 4
+
+1. ClassName: CelebrityActor
+    Attributes: Same as all other celebrities
+    Type: Celebrity
+    Behaviors: same as all other celebrities
+    Return Type: same as return type in Celebrity methods
+
+  17. We identify an overridden method if there is already an existing method of the same name 
+      in the parent class, but with different functionality/code. 
+  18. To send info from the subclass to the superclass, we can use get/set accessor methods to get and set 
+      any private instance variables of the subclass 
+  19. super() or extends
+  20. The method executed would be the superclass version of the method because 
+      java treats the subclass as the type of the ArrayList, which is the superclass.
