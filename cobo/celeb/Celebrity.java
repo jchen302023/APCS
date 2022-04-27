@@ -5,14 +5,10 @@
  */
 public class Celebrity
 {
-	/**
-	 * The clue to determine the celebrity
-	 */
-	
-	/**
-	 * The answer or name of the celebrity.
-	 */
-	
+	private String _clue;
+
+	private String _answer;
+
 	/**
 	 * Creates a Celebrity instance with the supplied answer and clue
 	 * @param answer
@@ -20,6 +16,8 @@ public class Celebrity
 	 */
 	public Celebrity(String answer, String clue)
 	{
+		_answer = answer;
+		_clue = clue;
 	}
 
 	/**
@@ -28,7 +26,7 @@ public class Celebrity
 	 */
 	public String getClue()
 	{
-		return null;
+		return _clue;
 	}
 
 	/**
@@ -37,7 +35,7 @@ public class Celebrity
 	 */
 	public String getAnswer()
 	{
-		return null;
+		return _answer;
 	}
 
 	/**
@@ -46,7 +44,7 @@ public class Celebrity
 	 */
 	public void setClue(String clue)
 	{
-		
+		_clue = clue;
 	}
 
 	/**
@@ -55,16 +53,24 @@ public class Celebrity
 	 */
 	public void setAnswer(String answer)
 	{
-		
+		_answer = answer;
 	}
-	
+
 	/**
 	 * Provides a String representation of the Celebrity.
 	 */
 	@Override
 	public String toString()
 	{
-		return null;
+		return _answer + ": "+ _clue;
 	}
-	
+
+	public static void main(String[] args){
+		Celebrity a = new Celebrity("Biden", "current president");
+		System.out.println(a);
+		a.setAnswer("Trump");
+		a.setClue("the previous president");
+		System.out.println(a);
+	}
+
 }
