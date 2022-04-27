@@ -7,17 +7,17 @@
 The celeb experience?? :) 
 
 To Do List:
-~~ * Discussion how to implement Game class ~~
+* ~~  Discussion how to implement Game class ~~
 ~~ * Make a celebrity class => Instance vars String name and String clue~~
-~~ * Work on CelebrityGame => Instant vars ArrayList<Celebrity> CelebrityGameList~~
-~~ * Work on Game methods: 
-    - addCelebrity
+* ~~ Work on CelebrityGame => Instant vars ArrayList<Celebrity> CelebrityGameList~~
+* ~~ Work on Game methods: ~~ 
+    ~~ - addCelebrity
     - validateCelebrity
     - validateClue
     - processGuess
     - sendClue 
     - play(), getCelebrityGameSize()~~
-~~ * Update CelebrityGame to accomodate for our new flavor of celebrity (VideoGameCeleb)~~
-~~ * Modify addCelebrity, validateClue
-~~ * Last: read about GUI, implement GUI~~
+* ~~ Update CelebrityGame to accomodate for our new flavor of celebrity (VideoGameCeleb)~~
+* ~~ Modify addCelebrity, validateClue~~
+* ~~ Last: read about GUI, implement GUI~~
 - GUI Radio
