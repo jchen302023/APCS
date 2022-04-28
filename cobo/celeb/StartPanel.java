@@ -195,6 +195,15 @@ public class StartPanel extends JPanel
   {
     this.add(myRadioButton);
     typeGroup.add(myRadioButton);
+    this.setLayout(panelLayout);
+    this.add(clueLabel);
+    this.add(celebrityRadio);
+    this.add(literatureRadio);
+    this.add(answerField);
+    this.add(clueField);
+    this.add(startButton);
+    this.add(celebrityCountLabel);
+    this.add(addCelebrityButton);
     // Adds the RadioButtons to the group so only one can be selected.
   }
 
@@ -287,7 +296,7 @@ public class StartPanel extends JPanel
   {
     answerField.setText("Type in the celebrity!!");
     answerField.setBackground(Color.RED);
-    clueFieldr.setText("Type in the clue");
+    clueField.setText("Type in the clue");
     clueField.setBackground(Color.RED);
   }
 
