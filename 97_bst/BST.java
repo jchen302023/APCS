@@ -1,4 +1,9 @@
 /**
+Team BrainForked: Gloria Lee, Jack Chen, Kevin Cheng
+APCS pd08
+HW97: Prune Your Tree
+2022-05-11r
+time spent: 1 hrs
  * class BST
  * v2:partial
  * SKELETON
