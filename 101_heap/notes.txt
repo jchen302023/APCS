@@ -12,4 +12,4 @@ DISCO:
 QCC: 
 * Would it be possible to have multiple of the same value in one tree? (probably yes but)
 * How to prevent an add algo that just causes a heavily skewed tree? 
-* Our algo makes our tree very line ): 
+* Our algo makes our tree very line ): ): 
