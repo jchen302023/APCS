@@ -1,0 +1,16 @@
+Team BrainForked: Gloria Lee, Jack Chen, Kevin Cheng
+APCS pd08
+HW101: Heap o'Trouble
+2022-05-16T
+time spent: 1 hrs
+
+1) If nextvalue < root of maxHeap, add to maxHeap
+2) If heaps have a size diff of more than 2, remove from the larger heap and add it to the smaller heap (done in add method)
+3) Find median at any time by: 
+  a) if heap sizes equal, median is the mean of roots
+  b) if heap sizes !equal, median is the root of the larger heap 
+  
+DISCO:
+* Heaps ): 
+QCC:
+* why le file so ridiculously big 
