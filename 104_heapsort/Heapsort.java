@@ -1,4 +1,22 @@
 /**
+Team BrainForked: Gloria Lee, Jack Chen, Kevin Cheng
+APCS pd08
+HW104
+2022-05-20F
+time spent: 1 hrs
+
+DISCO:
+* time complexity of heapsort is O(nlogn)
+* Java hates us and we hate java
+
+QCC:
+* why no work?
+* what's the purpose of overwriting the last leaf with old root value? isn't that done during swap?
+* something wrong with the algo? or our perception of the algo? why if i am > least child, swap with that child
+  why not instead if i am < greatest child, swap with that child
+* When you heapify, does one use maxHeap or minHeap?
+
+
  * class Heapsort
  * SKELETON
  * sorts in-place by heapifying data, then repeatedly pulling from heap
@@ -28,7 +46,7 @@ public class Heapsort
   
     //STEP 2: repeatedly pull from heap until empty
     //(Sorted region will grow from R to L)
-    for( int lastLeaf = data.length - 1; lastLeaf >= 0; lastLeaf -- ) {
+    for( int lastLeaf = data.length - 1; lastLeaf > 0; lastLeaf -- ) {
       //set aside root val
       int tmp = data[0];
   
@@ -41,22 +59,34 @@ public class Heapsort
       int maxChildPos;
 
       while( pos < lastLeaf ) {
-  
+        System.out.println("1");
+  printArr( data );
         //choose child w/ max value, or check for child 
         maxChildPos = maxChildPos(pos, lastLeaf, data); 
+        minChildPos = minChildPos(pos, lastLeaf, data);
+        
         //if no children, then i've walked far enough
         if ( maxChildPos == -1 )
           break;
         //if i am greater than my greatest child, i've walked far enough
-        else if ( data[pos] >= data[maxChildPos] )
+        else if ( data[pos] > data[maxChildPos] )
           break;
-        //if i am > least child, swap with that child
-        else { 
-          minChildPos = minChildPos(pos, lastLeaf, data); 
-          swap(pos, minChildPos, data);
+        //if i am < greatest child, swap with that child
+        else {
+          
+            swap(pos, maxChildPos, data);
+            pos = maxChildPos;
+              printArr( data );  
+            
+          
+          
         }
+      
         
       }
+          
+      
+      
       
       //overwrite last leaf with old root val
       data[lastLeaf] = tmp;
@@ -132,7 +162,7 @@ public class Heapsort
     if ( pos < 0 || pos >= last || lc >= last )
       retVal = -1;
     //if no right child, then left child is only option for min
-    else if ( rc >= last )
+    else if ( rc > last )
       retVal = lc;
     //have 2 children, so compare to find least
     else if ( a[lc] < (a[rc]))
