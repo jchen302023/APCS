@@ -7,6 +7,7 @@ time spent: 1 hrs
 
 DISCO:
 * time complexity of heapsort is O(nlogn)
+* heapsort doesn't require you to create another array that is sorted bc it sorts "in place"
 * Java hates us and we hate java
 
 QCC:
